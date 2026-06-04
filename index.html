@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Séance 16 - Enrichir ses leads avec data.gouv | DENEM Academy</title>
+<link rel="icon" href="logo-denem.jpeg">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fbfcff;color:#17142f;font-family:Inter,Arial,sans-serif;line-height:1.6;overflow-x:hidden}::selection{background:#35d2c6;color:#101026}a{color:inherit}.progress{position:fixed;top:0;left:0;height:5px;width:0;z-index:30;background:linear-gradient(90deg,#17142f,#35d2c6,#ff8a3d)}.topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:2px solid #17142f}.topbar-inner{max-width:1180px;margin:auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{display:flex;align-items:center;gap:10px;font-weight:950;letter-spacing:.04em;text-transform:uppercase;font-size:13px}.brand img{width:34px;height:34px;border:2px solid #17142f;border-radius:8px;object-fit:cover}.pill{border:2px solid #17142f;border-radius:999px;background:#35d2c6;box-shadow:3px 3px 0 #17142f;padding:7px 12px;font:900 12px/1 ui-monospace,Menlo,monospace;text-transform:uppercase}.hero{position:relative;overflow:hidden;background:#fff;border-bottom:2px solid #17142f}.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(53,210,198,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(23,20,47,.08) 1px,transparent 1px);background-size:34px 34px}.hero-wrap{position:relative;max-width:1180px;margin:auto;padding:76px 18px 56px;display:grid;grid-template-columns:1.02fr .98fr;gap:34px;align-items:center}.eyebrow,.kicker{display:inline-flex;width:max-content;max-width:100%;border:2px solid #17142f;background:#35d2c6;color:#17142f;border-radius:5px;box-shadow:4px 4px 0 #17142f;padding:7px 11px;font:900 12px/1.2 ui-monospace,Menlo,monospace;text-transform:uppercase;letter-spacing:.08em}h1{font-size:clamp(42px,7vw,90px);line-height:.92;margin:20px 0 18px;letter-spacing:0}h1 span{color:#35d2c6;text-shadow:3px 3px 0 #17142f}.hero p{font-size:18px;color:#4b5068;max-width:760px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}.stat{border:2px solid #17142f;background:#fff;border-radius:8px;box-shadow:5px 5px 0 #17142f;padding:14px}.stat b{display:block;font-size:28px;line-height:1;color:#17142f}.stat small{font-weight:850;color:#62677c}.media{margin:0;border:2px solid #17142f;border-radius:8px;overflow:hidden;background:#fff;box-shadow:7px 7px 0 #17142f}.media img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:#eef2f7}.media figcaption{border-top:2px solid #17142f;background:#fff;padding:10px 12px;font-size:13px;font-weight:800;color:#4b5068}.full-media img{aspect-ratio:16/8}.toc{max-width:1180px;margin:auto;padding:28px 18px;display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.toc a{text-decoration:none;border:2px solid #17142f;background:#fff;border-radius:8px;box-shadow:4px 4px 0 #17142f;padding:14px;min-height:110px}.toc span{font:900 12px/1 monospace;color:#ff6b35}.toc b{display:block;margin-top:9px;font-size:18px;line-height:1.15}.section{border-top:2px solid #17142f;scroll-margin-top:78px}.tone-1{background:#fff}.tone-2{background:#f1fbfa}.tone-3{background:#f7f4ff}.tone-4{background:#fff7ed}.tone-5{background:#f8fafc}.tone-6{background:#eff6ff}.wrap{max-width:1180px;margin:auto;padding:58px 18px;display:grid;gap:28px}.layout-image .wrap,.layout-check .wrap,.layout-alert .wrap,.layout-before .wrap,.layout-diagnostic .wrap,.layout-flow .wrap,.layout-method .wrap,.layout-timeline .wrap{grid-template-columns:.9fr 1.1fr;align-items:center}.layout-full .wrap,.layout-table .wrap,.layout-cards .wrap,.layout-quote .wrap,.layout-prompt .wrap,.layout-final .wrap{grid-template-columns:1fr}.section-copy h2{font-size:clamp(31px,4vw,54px);line-height:1;margin:14px 0 16px;letter-spacing:0}.section-copy p{color:#4b5068;font-size:18px;margin:0}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}.cards article,.alert-box,.diagnostic div,.final-card,.timeline article{border:2px solid #17142f;background:#fff;border-radius:8px;box-shadow:5px 5px 0 #17142f;padding:18px}.cards article strong,.diagnostic b{display:block;font-size:18px;margin-bottom:8px}.cards article p,.diagnostic p,.alert-box p,.final-card li,.timeline p{margin:0;color:#4b5068}.checklist,.method{list-style:none;margin:0;padding:0;display:grid;gap:12px}.checklist li,.method li{display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:center;border:2px solid #17142f;background:#fff;border-radius:8px;box-shadow:4px 4px 0 #17142f;padding:12px}.checklist span,.method span{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#17142f;color:#fff;font:900 14px/1 monospace}.checklist p,.method p{margin:0;font-weight:800;color:#293046}.alert-box{background:#17142f;color:#fff}.alert-box b{color:#35d2c6;text-transform:uppercase;font:900 13px/1 monospace;letter-spacing:.08em}.alert-box p{color:#eef6f8;font-size:20px;margin-top:10px}.before-after{display:grid;grid-template-columns:1fr 1fr;gap:14px}.before-after div{border:2px solid #17142f;border-radius:8px;box-shadow:5px 5px 0 #17142f;padding:18px;background:#fff}.before-after div:last-child{background:#35d2c6}.before-after span{font:900 12px/1 monospace;text-transform:uppercase}.before-after p{font-size:18px;font-weight:850;margin:10px 0 0;color:#17142f}.table-wrap{overflow-x:auto;border:2px solid #17142f;border-radius:8px;box-shadow:5px 5px 0 #17142f;background:#fff}table{width:100%;border-collapse:collapse;min-width:700px}th,td{border-bottom:1px solid #d8dee9;padding:14px;text-align:left;vertical-align:top}th{background:#17142f;color:#fff;font:900 12px/1.25 monospace;text-transform:uppercase;letter-spacing:.06em}td{color:#4b5068;font-weight:700}blockquote{margin:0;border:2px solid #17142f;background:#35d2c6;border-radius:10px;box-shadow:7px 7px 0 #17142f;padding:34px;font-size:clamp(25px,4vw,46px);font-weight:950;line-height:1.05}.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.flow span{position:relative;border:2px solid #17142f;background:#fff;border-radius:999px;box-shadow:3px 3px 0 #17142f;padding:12px 16px;font:900 13px/1 monospace}.flow span:not(:last-child):after{content:"→";margin-left:10px;color:#ff6b35}.prompt-card{border:2px solid #17142f;border-radius:10px;overflow:hidden;box-shadow:7px 7px 0 #17142f;background:#111225;color:#f6fbff}.prompt-head{display:flex;justify-content:space-between;align-items:center;gap:14px;border-bottom:2px solid rgba(255,255,255,.2);padding:12px 14px;background:#17142f}.prompt-head span{font:900 12px/1 monospace;text-transform:uppercase;letter-spacing:.08em;color:#35d2c6}.copy-btn{border:2px solid #fff;background:#fff;color:#17142f;border-radius:6px;padding:7px 11px;font-weight:900;cursor:pointer;box-shadow:3px 3px 0 rgba(255,255,255,.25)}.prompt-card pre{margin:0;padding:20px;max-height:720px;overflow:auto;white-space:pre-wrap;word-break:break-word;font:650 13px/1.65 ui-monospace,Menlo,monospace}.diagnostic{display:grid;gap:12px}.diagnostic div:last-child{background:#35d2c6}.timeline{display:grid;gap:12px}.timeline article{display:grid;grid-template-columns:54px 1fr;align-items:center;gap:14px}.timeline span{display:grid;place-items:center;width:44px;height:44px;border-radius:6px;background:#17142f;color:#fff;font:900 16px/1 monospace}.final-card{background:#35d2c6;font-size:20px;font-weight:850}.final-card ul{margin:0;padding-left:22px}.footer{background:#17142f;color:#fff;padding:38px 18px;text-align:center}.footer a{color:#35d2c6;font-weight:900}@media(max-width:980px){.hero-wrap,.layout-image .wrap,.layout-check .wrap,.layout-alert .wrap,.layout-before .wrap,.layout-diagnostic .wrap,.layout-flow .wrap,.layout-method .wrap,.layout-timeline .wrap{grid-template-columns:1fr}.toc{grid-template-columns:repeat(2,1fr)}.stats,.before-after{grid-template-columns:1fr}}@media(max-width:620px){.topbar-inner{padding:10px 12px}.brand span{font-size:11px}.pill{font-size:10px;padding:6px 9px}.hero-wrap{padding:48px 14px 42px}.wrap{padding:44px 14px}.toc{grid-template-columns:1fr;padding:20px 14px}.section-copy p,.hero p{font-size:16px}.prompt-card pre{font-size:12px;padding:15px}.table-wrap{overflow:visible}table,thead,tbody,tr,th,td{display:block;width:100%;min-width:0}thead{display:none}tr{border-bottom:2px solid #17142f}td{border-bottom:0;padding:12px 14px}.media figcaption{font-size:12px}.full-media img,.media img{aspect-ratio:16/10}}
+@media(max-width:620px){h1{font-size:clamp(38px,13vw,54px);line-height:1.04}h1 span{display:block;margin-top:4px;text-shadow:2px 2px 0 #17142f}.eyebrow,.kicker{font-size:11px;line-height:1.25;white-space:normal}.hero p{max-width:100%}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<nav class="topbar"><div class="topbar-inner"><div class="brand"><img src="logo-denem.jpeg" alt="DENEM Academy"><span>DENEM Academy · Séance 16</span></div><span class="pill">data.gouv</span></div></nav>
+<header class="hero">
+  <div class="hero-wrap">
+    <div>
+      <p class="eyebrow">Acte 2 · Enrichissement officiel</p>
+      <h1>Enrichir ses leads avec <span>data.gouv</span></h1>
+      <p>Je transforme une liste de restaurants collectée avec Serper en base B2B vérifiable : SIREN, SIRET, dirigeants, activité, score de matching et onglets prêts pour Apify.</p>
+      <div class="stats"><div class="stat"><b>80</b><small>sections guidées</small></div><div class="stat"><b>30</b><small>captures vidéo</small></div><div class="stat"><b>8</b><small>prompts copiables</small></div></div>
+    </div>
+    
+    <figure class="media">
+      <img src="img/session-16/01-intro-support-seance-16.jpg" alt="Je pose l&#x27;objectif : enrichir les leads avec data.gouv." loading="lazy">
+      <figcaption>Je pose l&#x27;objectif : enrichir les leads avec data.gouv.</figcaption>
+    </figure>
+  </div>
+</header>
+<div class="toc"><a href="#section-01"><span>Acte 01</span><b>Comprendre la couche de vérité</b></a><a href="#section-11"><span>Acte 02</span><b>Explorer data.gouv</b></a><a href="#section-25"><span>Acte 03</span><b>Écrire le prompt maître</b></a><a href="#section-37"><span>Acte 04</span><b>Exécuter, diagnostiquer, corriger</b></a><a href="#section-55"><span>Acte 05</span><b>Contrôler le classeur</b></a><a href="#section-71"><span>Acte 06</span><b>Préparer Apify</b></a></div>
+<main>
+
+<section id="section-01" class="section tone-1 layout-image" data-section="1">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">01 · Vision</p>
+      <h2>01. Je transforme une base Google en base vérifiable</h2>
+      <p>Je repars des leads collectés avec Serper et Google Maps. Cette fois, je ne cherche pas encore les emails : je vérifie qui existe vraiment derrière chaque fiche.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/01-intro-support-seance-16.jpg" alt="Je pose l&#x27;objectif : enrichir les leads avec data.gouv." loading="lazy">
+      <figcaption>Je pose l&#x27;objectif : enrichir les leads avec data.gouv.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-02" class="section tone-2 layout-cards" data-section="2">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">02 · Positionnement</p>
+      <h2>02. data.gouv est une couche de vérité</h2>
+      <p>Une base de prospection devient beaucoup plus solide quand elle contient une identité légale fiable.</p>
+    </div><div class="cards"><article><strong>Ce que je garde</strong><p>Nom, ville, site, téléphone, email si déjà trouvé.</p></article><article><strong>Ce que j&#x27;ajoute</strong><p>SIREN, SIRET, raison sociale, APE, statut, dirigeants.</p></article><article><strong>Ce que je prépare</strong><p>Un fichier prêt pour Apify et la prospection.</p></article></div>
+  </div>
+</section>
+
+<section id="section-03" class="section tone-3 layout-before" data-section="3">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">03 · Avant / après</p>
+      <h2>03. Je ne veux plus une liste floue</h2>
+      <p>Un nom Google Maps est utile, mais il ne suffit pas pour industrialiser une prospection.</p>
+    </div><div class="before-after"><div><span>Avant</span><p>Restaurant trouvé sur Google, nom commercial approximatif, adresse parfois incomplète.</p></div><div><span>Après</span><p>Entreprise reliée à un SIREN/SIRET, activité officielle, statut actif et niveau de confiance.</p></div></div>
+  </div>
+</section>
+
+<section id="section-04" class="section tone-4 layout-image" data-section="4">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">04 · Source</p>
+      <h2>04. Le fichier de départ contient déjà une logique commerciale</h2>
+      <p>Les scores et les segments ne sont pas perdus. Je veux ajouter les données officielles sans écraser les informations utiles déjà présentes.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/02-tableur-leads-score-priorite.jpg" alt="Le fichier de départ contient déjà des scores et des segments." loading="lazy">
+      <figcaption>Le fichier de départ contient déjà des scores et des segments.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-05" class="section tone-5 layout-check" data-section="5">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">05 · Règle</p>
+      <h2>05. Je conserve toutes les colonnes existantes</h2>
+      <p>L&#x27;enrichissement ne doit jamais casser le travail de la séance précédente.</p>
+    </div><ul class="checklist"><li><span>01</span><p>Je garde `lead_id` comme repère stable.</p></li><li><span>02</span><p>Je garde `email`, `phone`, `website` et `domain`.</p></li><li><span>03</span><p>J&#x27;ajoute uniquement des colonnes avec le préfixe `dg_`.</p></li><li><span>04</span><p>Je garde les notes et les sources pour contrôler le résultat.</p></li></ul>
+  </div>
+</section>
+
+<section id="section-06" class="section tone-6 layout-table" data-section="6">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">06 · Colonnes</p>
+      <h2>06. Les colonnes Serper qui servent au matching</h2>
+      <p>Je donne à Codex les champs qui permettent de croiser les données publiques.</p>
+    </div><div class="table-wrap"><table><thead><tr><th>Colonne</th><th>Utilité</th><th>Risque</th></tr></thead><tbody><tr><td>company_name</td><td>Recherche textuelle</td><td>Nom commercial différent de la raison sociale</td></tr><tr><td>address + city</td><td>Géocodage et proximité</td><td>Adresse partagée par plusieurs sociétés</td></tr><tr><td>website / domain</td><td>Signal de contexte</td><td>Pas toujours présent</td></tr><tr><td>category / segment</td><td>Filtre d&#x27;activité</td><td>Catégorie Google parfois vague</td></tr><tr><td>priority_score</td><td>Priorisation commerciale</td><td>Ne prouve pas l&#x27;existence légale</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<section id="section-07" class="section tone-1 layout-quote" data-section="7">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">07 · Principe</p>
+      <h2>07. Le but n&#x27;est pas de faire joli</h2>
+      <p>Je veux une base qui me dit quoi faire ensuite.</p>
+    </div><blockquote>Un lead est exploitable quand je sais pourquoi je lui fais confiance.</blockquote>
+  </div>
+</section>
+
+<section id="section-08" class="section tone-2 layout-image" data-section="8">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">08 · Onglets</p>
+      <h2>08. Le classeur doit rester lisible</h2>
+      <p>Je garde des onglets utiles : dashboard, all leads, avec email, sans email, heatmap et segments. L&#x27;enrichissement data.gouv doit s&#x27;intégrer dans cette logique.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/03-onglets-leads-google-sheets.jpg" alt="Les onglets du classeur permettent de lire la base sous plusieurs angles." loading="lazy">
+      <figcaption>Les onglets du classeur permettent de lire la base sous plusieurs angles.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-09" class="section tone-3 layout-flow" data-section="9">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">09 · Chaîne</p>
+      <h2>09. La chaîne complète est simple</h2>
+      <p>Je passe d&#x27;une donnée commerciale à une donnée légale, puis je prépare l&#x27;étape de contact.</p>
+    </div><div class="flow"><span>leads-massif.xlsx</span><span>API Adresse</span><span>Recherche entreprises</span><span>matching</span><span>dg_*</span><span>READY_FOR_APIFY</span></div>
+  </div>
+</section>
+
+<section id="section-10" class="section tone-4 layout-alert" data-section="10">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">10 · Attention</p>
+      <h2>10. data.gouv ne remplace pas Apify</h2>
+      <p>data.gouv ne va pas inventer les emails manquants. Il fiabilise l&#x27;entreprise. Les emails viendront ensuite avec une source de contact dédiée.</p>
+    </div><aside class="alert-box"><b>Point de vigilance</b><p>Ne mélange pas enrichissement légal et recherche de contact. Ce sont deux étapes différentes.</p></aside>
+  </div>
+</section>
+
+<section id="section-11" class="section tone-5 layout-full" data-section="11">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">11 · Exploration</p>
+      <h2>11. Je pars de la plateforme data.gouv</h2>
+      <p>Je vérifie d&#x27;abord ce qui existe publiquement avant de demander à Codex d&#x27;automatiser. Comprendre la source évite de faire un prompt abstrait.</p>
+    </div>
+    <figure class="media full-media">
+      <img src="img/session-16/05-page-accueil-data-gouv.jpg" alt="La plateforme publique sert de point d&#x27;entrée pour trouver les données." loading="lazy">
+      <figcaption>La plateforme publique sert de point d&#x27;entrée pour trouver les données.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-12" class="section tone-6 layout-image" data-section="12">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">12 · Catalogue</p>
+      <h2>12. Le catalogue contient bien plus que SIRENE</h2>
+      <p>Je vois les jeux de données, les fichiers, les organisations et les APIs. Pour la séance, je me concentre sur les entreprises, mais je garde en tête les autres usages.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/04-data-gouv-catalogue-donnees.jpg" alt="data.gouv donne accès à des jeux de données publics exploitables." loading="lazy">
+      <figcaption>data.gouv donne accès à des jeux de données publics exploitables.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-13" class="section tone-1 layout-cards" data-section="13">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">13 · Sources</p>
+      <h2>13. Les deux sources utiles maintenant</h2>
+      <p>Pour un premier enrichissement robuste, je n&#x27;ai pas besoin d&#x27;un écosystème compliqué.</p>
+    </div><div class="cards"><article><strong>API Adresse</strong><p>Nettoyer l&#x27;adresse, récupérer code postal, coordonnées et score BAN.</p></article><article><strong>Recherche d&#x27;entreprises</strong><p>Trouver l&#x27;établissement légal, les dirigeants et les informations publiques.</p></article><article><strong>Dataset SIRENE local</strong><p>Prendre le relais quand l&#x27;API seule ne couvre pas assez de lignes.</p></article></div>
+  </div>
+</section>
+
+<section id="section-14" class="section tone-2 layout-image" data-section="14">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">14 · INSEE</p>
+      <h2>14. L&#x27;INSEE est la source centrale</h2>
+      <p>Je repère l&#x27;organisation INSEE et ses APIs. L&#x27;intérêt est clair : je peux interroger des données officielles sans clé payante.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/06-organisation-insee-api.jpg" alt="Je repère l&#x27;organisation INSEE et ses APIs." loading="lazy">
+      <figcaption>Je repère l&#x27;organisation INSEE et ses APIs.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-15" class="section tone-3 layout-image" data-section="15">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">15 · Preuve</p>
+      <h2>15. Je vérifie la nature des données</h2>
+      <p>La description de l&#x27;INSEE confirme que les données concernent l&#x27;économie et les sociétés françaises. Je peux les utiliser pour fiabiliser la base.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/07-description-insee.jpg" alt="La page INSEE confirme la nature officielle des données." loading="lazy">
+      <figcaption>La page INSEE confirme la nature officielle des données.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-16" class="section tone-4 layout-table" data-section="16">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">16 · APIs</p>
+      <h2>16. Ce que chaque API apporte</h2>
+      <p>Je sépare les rôles pour éviter les requêtes inutiles.</p>
+    </div><div class="table-wrap"><table><thead><tr><th>API</th><th>Entrée</th><th>Sortie</th></tr></thead><tbody><tr><td>API Adresse</td><td>Adresse + ville</td><td>Adresse normalisée, code postal, latitude, longitude</td></tr><tr><td>Recherche entreprises</td><td>Nom + ville + code postal</td><td>SIREN, SIRET, raison sociale, activité, dirigeants</td></tr><tr><td>near_point</td><td>Latitude + longitude</td><td>Établissements proches quand la recherche textuelle échoue</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<section id="section-17" class="section tone-5 layout-image" data-section="17">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">17 · Réutilisations</p>
+      <h2>17. Les réutilisations donnent des idées</h2>
+      <p>Je regarde les projets publiés sur data.gouv. Ça montre qu&#x27;une donnée publique peut devenir un outil, un mini-site ou un actif SEO.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/08-reutilisations-data-gouv.jpg" alt="Les réutilisations montrent ce que d&#x27;autres créent avec les données publiques." loading="lazy">
+      <figcaption>Les réutilisations montrent ce que d&#x27;autres créent avec les données publiques.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-18" class="section tone-6 layout-image" data-section="18">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">18 · Inspiration</p>
+      <h2>18. Une source peut devenir un produit</h2>
+      <p>Les exemples de réutilisation montrent une autre compétence : créer un service à partir d&#x27;une API publique. Pour l&#x27;instant, je reste concentré sur la base de leads.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/11-selection-reutilisations.jpg" alt="Les exemples publics donnent aussi des pistes de mini-outils." loading="lazy">
+      <figcaption>Les exemples publics donnent aussi des pistes de mini-outils.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-19" class="section tone-1 layout-image" data-section="19">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">19 · Données populaires</p>
+      <h2>19. Je repère les datasets à fort potentiel</h2>
+      <p>Les datasets populaires comme DVF ou SIRENE montrent que les données publiques peuvent alimenter des analyses, des cartes, des bases clients et des outils.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/09-jeux-donnees-populaires.jpg" alt="Les jeux de données populaires donnent des idées de sources complémentaires." loading="lazy">
+      <figcaption>Les jeux de données populaires donnent des idées de sources complémentaires.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-20" class="section tone-2 layout-image" data-section="20">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">20 · API SIRENE</p>
+      <h2>20. Je localise l&#x27;API qui va servir au matching</h2>
+      <p>La recherche SIRENE est la porte d&#x27;entrée naturelle pour retrouver les entreprises françaises et leurs établissements.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/10-api-sirene-recherche.jpg" alt="La recherche API SIRENE permet d&#x27;interroger les entreprises." loading="lazy">
+      <figcaption>La recherche API SIRENE permet d&#x27;interroger les entreprises.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-21" class="section tone-3 layout-image" data-section="21">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">21 · Dataset</p>
+      <h2>21. Je lis aussi les pages de dataset</h2>
+      <p>Même quand un dataset n&#x27;est pas celui de la séance, la structure est utile : licence, fichiers, mises à jour, métriques et ressources.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/12-dataset-dvf-description.jpg" alt="Un dataset public détaille sa licence, ses fichiers et sa mise à jour." loading="lazy">
+      <figcaption>Un dataset public détaille sa licence, ses fichiers et sa mise à jour.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-22" class="section tone-4 layout-image" data-section="22">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">22 · Fichiers</p>
+      <h2>22. Les fichiers publics peuvent être énormes</h2>
+      <p>Je comprends pourquoi l&#x27;API ne suffit pas toujours. Parfois, il faut télécharger un fichier massif, filtrer localement et matcher soi-même.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/13-fichiers-dvf.jpg" alt="Les fichiers disponibles montrent la logique de téléchargement." loading="lazy">
+      <figcaption>Les fichiers disponibles montrent la logique de téléchargement.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-23" class="section tone-5 layout-image" data-section="23">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">23 · URLs</p>
+      <h2>23. Les métadonnées sont réutilisables par script</h2>
+      <p>Les URLs stables et les identifiants permettent à Codex de télécharger, journaliser et reprendre une tâche sans refaire tout le travail.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/14-url-metadonnees-dvf.jpg" alt="Les métadonnées donnent des URLs réutilisables par script." loading="lazy">
+      <figcaption>Les métadonnées donnent des URLs réutilisables par script.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-24" class="section tone-6 layout-quote" data-section="24">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">24 · Méthode</p>
+      <h2>24. Je n&#x27;automatise pas une source que je ne comprends pas</h2>
+      <p>Avant de lancer Codex, je veux savoir ce que je demande.</p>
+    </div><blockquote>Une bonne automatisation commence par une source comprise, pas par un prompt long.</blockquote>
+  </div>
+</section>
+
+<section id="section-25" class="section tone-1 layout-prompt" data-section="25">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">25 · Prompt maître</p>
+      <h2>25. Le prompt complet cadre toute la mission</h2>
+      <p>Ce prompt sert à transformer le fichier Serper en classeur enrichi avec data.gouv. Il donne le rôle, les APIs, les colonnes à préserver, les colonnes à ajouter et les fichiers de sortie.</p>
+    </div>
+    <div class="prompt-card">
+      <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+      <pre><code>Tu es un data engineer B2B senior, spécialiste de l&#x27;enrichissement de bases de leads françaises avec les données publiques officielles.
+
+MISSION
+Je te donne un fichier Excel généré lors de la séance Serper :
+@~/Desktop/mon-business/06-leads-gratuits/leads-serper.xlsx
+
+Ta mission est de créer une version enrichie avec data.gouv et les APIs publiques françaises.
+Le but n&#x27;est pas de trouver des emails ou des numéros de téléphone.
+Le but est de fiabiliser l&#x27;identité légale de chaque lead :
+- SIREN
+- SIRET
+- raison sociale
+- nom commercial officiel
+- code APE / NAF
+- statut actif ou fermé
+- date de création
+- tranche d&#x27;effectif
+- catégorie entreprise
+- dirigeants publics quand disponibles
+- chiffre d&#x27;affaires et résultat net quand disponibles
+- adresse officielle
+- latitude / longitude
+- score de confiance du matching
+
+APIS AUTORISÉES
+1. API Adresse :
+https://api-adresse.data.gouv.fr/search/
+
+2. API Recherche d&#x27;entreprises :
+https://recherche-entreprises.api.gouv.fr/search
+https://recherche-entreprises.api.gouv.fr/near_point
+
+Tu dois respecter les limites raisonnables d&#x27;appel.
+Mets un délai court entre les appels.
+Cache les réponses JSON pour ne pas répéter les mêmes requêtes.
+Ne contourne aucune restriction.
+
+FICHIER D&#x27;ENTRÉE
+Lis l&#x27;onglet principal du fichier :
+~/Desktop/mon-business/06-leads-gratuits/leads-serper.xlsx
+
+Colonnes importantes à utiliser si elles existent :
+- lead_id
+- company_name
+- segment
+- category
+- website
+- domain
+- email
+- phone
+- address
+- city
+- postal_code
+- google_rating
+- google_review_count
+- cid
+- source_urls
+- source_queries
+- source_endpoints
+- priority_score
+- priority_class
+- personalized_angle
+- outreach_message
+
+CONTRAINTE IMPORTANTE
+Tu dois conserver toutes les colonnes existantes.
+Tu ne dois jamais écraser email, phone, website, source_urls ou outreach_message.
+Tu ajoutes uniquement des colonnes avec le préfixe dg_.
+
+COLONNES À AJOUTER
+Ajoute au minimum :
+- dg_siren
+- dg_siret
+- dg_raison_sociale
+- dg_nom_commercial
+- dg_code_ape
+- dg_activite
+- dg_section_activite
+- dg_statut
+- dg_date_creation
+- dg_tranche_effectif
+- dg_categorie_entreprise
+- dg_dirigeant_nom
+- dg_dirigeant_role
+- dg_ca_dernier
+- dg_ca_annee
+- dg_resultat_net_dernier
+- dg_resultat_net_annee
+- dg_adresse_officielle
+- dg_code_postal_officiel
+- dg_ville_officielle
+- dg_latitude
+- dg_longitude
+- dg_distance_m
+- dg_match_score
+- dg_match_status
+- dg_match_method
+- dg_source_url
+- dg_notes
+
+STRUCTURE DE SORTIE
+Crée ou complète ce dossier :
+~/Desktop/mon-business/07-enrichissement-data-gouv/
+
+Crée :
+- leads-data-gouv-enriched.xlsx
+- leads-data-gouv-enriched.csv
+- rapport-data-gouv.md
+- data-gouv-cache/
+- data-gouv-cache/adresse/
+- data-gouv-cache/search/
+- data-gouv-cache/near-point/
+- data-gouv-ledger.csv
+
+MÉTHODE PAR LIGNE
+
+PHASE 1 — NORMALISATION
+Pour chaque lead :
+1. Nettoie company_name :
+   - supprime les emojis
+   - retire les suffixes marketing inutiles
+   - garde aussi le nom original
+2. Nettoie address et city.
+3. Si postal_code est vide, ne l&#x27;invente pas. Il sera récupéré via géocodage.
+4. Normalise domain depuis website si besoin.
+5. Crée une clé de cache stable par lead_id.
+
+PHASE 2 — GÉOCODAGE ADRESSE
+Si address et city existent :
+Appelle l&#x27;API Adresse avec :
+q = address + city
+limit = 1
+
+Récupère :
+- adresse normalisée
+- code postal
+- code commune
+- latitude
+- longitude
+- score BAN
+
+Si l&#x27;API Adresse ne trouve rien :
+- continue quand même avec recherche par nom + ville
+- note dg_notes = &quot;adresse non géocodée&quot;
+
+PHASE 3 — RECHERCHE TEXTUELLE ENTREPRISE
+Interroge l&#x27;API Recherche d&#x27;entreprises avec plusieurs stratégies :
+
+Stratégie A :
+q = company_name + city
+code_postal = code postal disponible
+etat_administratif = A
+
+Stratégie B :
+q = company_name nettoyé
+code_postal = code postal disponible
+etat_administratif = A
+
+Stratégie C :
+q = company_name + address + city
+etat_administratif = A
+
+Pour les restaurants, bars, traiteurs, cafés ou hôtels-restaurants :
+ajoute si utile :
+section_activite_principale = I
+et priorise les codes :
+- 56.10A
+- 56.10B
+- 56.10C
+- 56.30Z
+- 55.10Z seulement si le lead est hôtel ou hébergement
+
+PHASE 4 — RECHERCHE GÉOGRAPHIQUE
+Si le matching textuel est faible mais que tu as latitude/longitude :
+Appelle :
+/near_point
+lat = latitude BAN
+long = longitude BAN
+radius = 0.08 à 0.20 km selon densité
+section_activite_principale = I si le lead est restaurant / bar / traiteur
+
+Attention :
+Un résultat à la même adresse ne suffit pas.
+Une adresse peut contenir plusieurs sociétés.
+Le résultat géographique doit être comparé au nom commercial, aux enseignes, à l&#x27;activité et au statut.
+
+PHASE 5 — SCORING DE MATCHING
+Calcule dg_match_score sur 100 :
+- +35 si le nom commercial, l&#x27;enseigne ou la raison sociale ressemble fortement au company_name
+- +20 si une partie distinctive du nom est retrouvée
+- +20 si l&#x27;adresse correspond
+- +15 si distance inférieure à 50 mètres
+- +10 si code APE cohérent avec le secteur
+- +5 si établissement actif
+- -25 si la seule preuve est l&#x27;adresse
+- -30 si le code APE est manifestement incohérent
+- -40 si l&#x27;entreprise est fermée
+
+Définis dg_match_status :
+- HIGH_CONFIDENCE : score &gt;= 85 ET nom/enseigne cohérent ET adresse cohérente
+- MEDIUM_CONFIDENCE : score 65 à 84 avec cohérence raisonnable
+- ADDRESS_ONLY_CHECK : adresse ou distance cohérente mais nom différent
+- LOW_CONFIDENCE : score inférieur à 65 ou forte ambiguïté
+- NOT_FOUND : aucun résultat exploitable
+
+PHASE 6 — EXTRACTION DES DONNÉES
+Pour le meilleur candidat :
+Récupère :
+- siren
+- siret de l&#x27;établissement correspondant
+- nom_complet
+- nom_raison_sociale
+- nom_commercial
+- activité principale
+- section activité
+- état administratif
+- date création
+- tranche effectif
+- catégorie entreprise
+- adresse officielle
+- latitude / longitude officielle
+- dirigeants
+- finances si présentes
+
+Dirigeants :
+Priorise les rôles :
+1. Président
+2. Gérant
+3. Directeur général
+4. Représentant légal
+
+Ne mets pas les commissaires aux comptes comme décideur commercial.
+Si plusieurs dirigeants pertinents existent, garde le principal dans dg_dirigeant_nom et note les autres dans dg_notes.
+
+Finances :
+Si plusieurs années existent, prends la plus récente.
+Renseigne :
+- dg_ca_dernier
+- dg_ca_annee
+- dg_resultat_net_dernier
+- dg_resultat_net_annee
+
+PHASE 7 — CLASSEUR EXCEL
+Crée leads-data-gouv-enriched.xlsx avec ces onglets :
+
+1. DATA_GOUV_DASHBOARD
+KPIs :
+- total leads
+- enrichis avec SIREN
+- enrichis avec SIRET
+- HIGH_CONFIDENCE
+- MEDIUM_CONFIDENCE
+- ADDRESS_ONLY_CHECK
+- LOW_CONFIDENCE
+- NOT_FOUND
+- taux d&#x27;enrichissement
+- taux prêt pour Apify
+
+Graphiques :
+- répartition dg_match_status
+- top codes APE
+- top villes officielles
+- effectifs par tranche
+
+2. ALL_LEADS_ENRICHED
+Toutes les lignes d&#x27;origine + colonnes dg_.
+
+3. READY_FOR_APIFY
+Seulement :
+dg_match_status = HIGH_CONFIDENCE ou MEDIUM_CONFIDENCE
+et website ou domain non vide.
+
+4. TO_VERIFY
+Toutes les lignes :
+MEDIUM_CONFIDENCE
+ADDRESS_ONLY_CHECK
+LOW_CONFIDENCE
+avec dg_notes et la raison de doute.
+
+5. NOT_FOUND
+Lignes sans match fiable.
+
+6. DIRIGEANTS
+Une ligne par dirigeant trouvé :
+lead_id, company_name, dg_siren, dg_siret, nom, rôle, type_dirigeant, source.
+
+7. FINANCES
+lead_id, company_name, dg_siren, année, CA, résultat net.
+
+8. DATA_GOUV_LEDGER
+Toutes les requêtes :
+timestamp, lead_id, api, query, status, result_count, cache_file.
+
+9. SCORING_RULES
+Explique clairement la méthode de matching.
+
+MISE EN FORME
+- filtres sur les tableaux
+- première ligne figée
+- colonnes lisibles
+- couleurs par dg_match_status
+- aucune clé ou donnée secrète
+- notes claires pour les lignes à vérifier
+
+RAPPORT MARKDOWN
+Crée rapport-data-gouv.md avec :
+- résumé de la méthode
+- nombre de leads traités
+- nombre de SIREN trouvés
+- nombre de SIRET trouvés
+- taux HIGH_CONFIDENCE
+- top erreurs de matching
+- recommandations pour améliorer le fichier source
+- limites de data.gouv
+- suite recommandée : enrichissement Apify
+
+CONFORMITÉ
+N&#x27;utilise que les données publiquement diffusées par les APIs.
+Respecte les statuts de diffusion partielle.
+Ne collecte aucune donnée sensible.
+Ne transforme pas ces données en spam.
+Garde la source de chaque donnée.
+
+CONTRÔLE FINAL
+Avant de finir :
+- vérifie que le XLSX s&#x27;ouvre
+- vérifie que les colonnes dg_ existent
+- vérifie que READY_FOR_APIFY ne contient que des leads avec site ou domaine
+- vérifie que TO_VERIFY contient les cas ambigus
+- vérifie que dg_match_score est entre 0 et 100
+- vérifie qu&#x27;aucune colonne d&#x27;origine n&#x27;a été supprimée
+
+MESSAGE FINAL
+Réponds seulement avec :
+&quot;Enrichissement data.gouv terminé.
+Fichiers :
+- leads-data-gouv-enriched.xlsx
+- leads-data-gouv-enriched.csv
+- rapport-data-gouv.md
+
+Leads traités : X
+SIREN trouvés : Y
+SIRET trouvés : Z
+HIGH_CONFIDENCE : A
+MEDIUM_CONFIDENCE : B
+À vérifier : C
+Non trouvés : D
+Prêts pour Apify : E&quot;</code></pre>
+    </div>
+  </div>
+</section>
+
+<section id="section-26" class="section tone-2 layout-cards" data-section="26">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">26 · Rôle</p>
+      <h2>26. Je donne un rôle technique précis</h2>
+      <p>Je ne demande pas seulement d&#x27;enrichir. Je demande d&#x27;agir comme data engineer B2B senior.</p>
+    </div><div class="cards"><article><strong>Data engineer</strong><p>Structurer le fichier, les caches, les logs et le XLSX.</p></article><article><strong>Spécialiste B2B</strong><p>Comprendre les leads, les segments et les priorités commerciales.</p></article><article><strong>Données publiques</strong><p>Respecter les sources officielles et les limites d&#x27;appel.</p></article></div>
+  </div>
+</section>
+
+<section id="section-27" class="section tone-3 layout-check" data-section="27">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">27 · Contraintes</p>
+      <h2>27. Les contraintes protègent le fichier</h2>
+      <p>Je dois dire explicitement ce qui ne doit pas bouger.</p>
+    </div><ul class="checklist"><li><span>01</span><p>Ne pas écraser `email`.</p></li><li><span>02</span><p>Ne pas écraser `phone`.</p></li><li><span>03</span><p>Ne pas écraser `website`.</p></li><li><span>04</span><p>Ne pas supprimer `source_urls`.</p></li><li><span>05</span><p>Ne pas remplacer les angles de prospection.</p></li></ul>
+  </div>
+</section>
+
+<section id="section-28" class="section tone-4 layout-table" data-section="28">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">28 · dg_*</p>
+      <h2>28. Les colonnes dg_* rendent l&#x27;enrichissement identifiable</h2>
+      <p>Le préfixe évite de confondre ce qui vient de Serper avec ce qui vient de data.gouv.</p>
+    </div><div class="table-wrap"><table><thead><tr><th>Famille</th><th>Colonnes</th><th>Usage</th></tr></thead><tbody><tr><td>Identité</td><td>dg_siren, dg_siret, dg_raison_sociale</td><td>Relier le lead à l&#x27;entreprise officielle</td></tr><tr><td>Activité</td><td>dg_code_ape, dg_activite, dg_statut</td><td>Savoir si le lead correspond au secteur</td></tr><tr><td>Taille</td><td>dg_tranche_effectif, dg_categorie_entreprise</td><td>Comprendre le potentiel</td></tr><tr><td>Matching</td><td>dg_match_score, dg_match_status, dg_notes</td><td>Décider quoi faire ensuite</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<section id="section-29" class="section tone-5 layout-image" data-section="29">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">29 · Prompt visible</p>
+      <h2>29. Le prompt n&#x27;est pas juste une consigne</h2>
+      <p>Je construis une procédure complète : phases, caches, API, onglets, rapport, contrôle final. Plus le prompt est opérable, plus Codex peut travailler sans ambiguïté.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/18-prompt-maitre-data-gouv.jpg" alt="Le prompt maître cadre la mission d&#x27;enrichissement." loading="lazy">
+      <figcaption>Le prompt maître cadre la mission d&#x27;enrichissement.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-30" class="section tone-6 layout-flow" data-section="30">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">30 · Phases</p>
+      <h2>30. Le prompt suit un ordre exécutable</h2>
+      <p>Chaque phase a un rôle clair. Je ne laisse pas l&#x27;agent deviner la méthode.</p>
+    </div><div class="flow"><span>normaliser</span><span>géocoder</span><span>chercher</span><span>near_point</span><span>scorer</span><span>extraire</span><span>exporter</span><span>contrôler</span></div>
+  </div>
+</section>
+
+<section id="section-31" class="section tone-1 layout-alert" data-section="31">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">31 · Matching</p>
+      <h2>31. Une adresse ne suffit jamais</h2>
+      <p>Une même adresse peut héberger plusieurs sociétés. Le prompt doit croiser nom, enseigne, activité, distance et statut actif.</p>
+    </div><aside class="alert-box"><b>Point de vigilance</b><p>Un résultat géographique sans cohérence de nom devient un cas à vérifier, pas un lead validé.</p></aside>
+  </div>
+</section>
+
+<section id="section-32" class="section tone-2 layout-table" data-section="32">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">32 · Statuts</p>
+      <h2>32. Je force Codex à classer la confiance</h2>
+      <p>Les statuts m&#x27;évitent de lire 11 839 lignes une par une.</p>
+    </div><div class="table-wrap"><table><thead><tr><th>Statut</th><th>Signal</th><th>Décision</th></tr></thead><tbody><tr><td>HIGH_CONFIDENCE</td><td>Nom + adresse + activité cohérents</td><td>Prêt pour Apify</td></tr><tr><td>MEDIUM_CONFIDENCE</td><td>Cohérence raisonnable</td><td>Exploitable avec prudence</td></tr><tr><td>ADDRESS_ONLY_CHECK</td><td>Adresse bonne, nom ambigu</td><td>Vérification manuelle</td></tr><tr><td>LOW_CONFIDENCE</td><td>Signal faible</td><td>Ne pas contacter</td></tr><tr><td>NOT_FOUND</td><td>Aucun match</td><td>Exclure ou reprendre autrement</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<section id="section-33" class="section tone-3 layout-cards" data-section="33">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">33 · Scoring</p>
+      <h2>33. Le score explique la décision</h2>
+      <p>Je ne veux pas un résultat magique. Je veux savoir pourquoi le lead est classé.</p>
+    </div><div class="cards"><article><strong>+35</strong><p>Nom commercial ou raison sociale proche.</p></article><article><strong>+20</strong><p>Adresse correspondante.</p></article><article><strong>+15</strong><p>Distance inférieure à 50 mètres.</p></article><article><strong>-25</strong><p>La seule preuve est l&#x27;adresse.</p></article><article><strong>-40</strong><p>Entreprise fermée.</p></article></div>
+  </div>
+</section>
+
+<section id="section-34" class="section tone-4 layout-method" data-section="34">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">34 · Sortie</p>
+      <h2>34. Je demande des fichiers exploitables</h2>
+      <p>Le prompt ne doit pas finir avec un simple message. Il doit produire des fichiers.</p>
+    </div><ol class="method"><li><span>01</span><p>`leads-data-gouv-enriched.xlsx`</p></li><li><span>02</span><p>`leads-data-gouv-enriched.csv`</p></li><li><span>03</span><p>`rapport-data-gouv.md`</p></li><li><span>04</span><p>`data-gouv-cache/`</p></li><li><span>05</span><p>`data-gouv-ledger.csv`</p></li></ol>
+  </div>
+</section>
+
+<section id="section-35" class="section tone-5 layout-table" data-section="35">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">35 · Onglets</p>
+      <h2>35. Le classeur final doit guider l&#x27;action</h2>
+      <p>Chaque onglet répond à une question concrète.</p>
+    </div><div class="table-wrap"><table><thead><tr><th>Onglet</th><th>Question</th></tr></thead><tbody><tr><td>DATA_GOUV_DASHBOARD</td><td>Qu&#x27;est-ce qui a été enrichi ?</td></tr><tr><td>ALL_LEADS_ENRICHED</td><td>Quelle est la ligne complète ?</td></tr><tr><td>READY_FOR_APIFY</td><td>Quels leads passent à l&#x27;étape contact ?</td></tr><tr><td>TO_VERIFY</td><td>Quels cas restent ambigus ?</td></tr><tr><td>NOT_FOUND</td><td>Qu&#x27;est-ce qu&#x27;on exclut ou reprend ?</td></tr><tr><td>DATA_GOUV_LEDGER</td><td>Quelles requêtes ont été faites ?</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<section id="section-36" class="section tone-6 layout-quote" data-section="36">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">36 · Contrôle</p>
+      <h2>36. Je termine toujours par des vérifications</h2>
+      <p>Le prompt se termine par une checklist parce qu&#x27;un fichier généré doit être contrôlé.</p>
+    </div><blockquote>Un bon prompt ne demande pas seulement de produire. Il demande de prouver que la sortie tient debout.</blockquote>
+  </div>
+</section>
+
+<section id="section-37" class="section tone-1 layout-image" data-section="37">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">37 · Exécution</p>
+      <h2>37. Je lance Codex dans le bon dossier</h2>
+      <p>Je garde la session précédente ouverte si elle pointe déjà vers le dossier de travail. Sinon, j&#x27;ouvre un terminal dans le dossier projet.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/16-dossier-leads-fichiers.jpg" alt="Le dossier LEADS contient les exports à ne pas mélanger." loading="lazy">
+      <figcaption>Le dossier LEADS contient les exports à ne pas mélanger.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-38" class="section tone-2 layout-check" data-section="38">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">38 · Organisation</p>
+      <h2>38. Avant de coller le prompt, je vérifie le contexte</h2>
+      <p>Une erreur de dossier peut faire perdre du temps à la fin.</p>
+    </div><ul class="checklist"><li><span>01</span><p>Je suis dans le dossier `06-prospects` ou le dossier projet correct.</p></li><li><span>02</span><p>Le dossier `LEADS` contient le fichier source.</p></li><li><span>03</span><p>Le prompt indique clairement le chemin d&#x27;entrée.</p></li><li><span>04</span><p>Le dossier de sortie est séparé de la collecte précédente.</p></li></ul>
+  </div>
+</section>
+
+<section id="section-39" class="section tone-3 layout-image" data-section="39">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">39 · Prompt collé</p>
+      <h2>39. Je colle le prompt maître et je laisse l&#x27;agent démarrer</h2>
+      <p>Codex peut créer les scripts, appeler les APIs, gérer les caches et produire le classeur. Je surveille la progression au lieu de micro-manager chaque ligne.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/18-prompt-maitre-data-gouv.jpg" alt="Le prompt maître cadre la mission d&#x27;enrichissement." loading="lazy">
+      <figcaption>Le prompt maître cadre la mission d&#x27;enrichissement.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-40" class="section tone-4 layout-cards" data-section="40">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">40 · Ce que Codex fait</p>
+      <h2>40. L&#x27;agent travaille comme un pipeline</h2>
+      <p>Je dois lire ses retours comme des étapes de traitement.</p>
+    </div><div class="cards"><article><strong>Téléchargement</strong><p>Récupérer ou interroger les données publiques.</p></article><article><strong>Script</strong><p>Préparer la normalisation et le matching.</p></article><article><strong>Monitors</strong><p>Suivre plusieurs tâches en parallèle.</p></article><article><strong>Export</strong><p>Reconstruire le XLSX avec les onglets.</p></article></div>
+  </div>
+</section>
+
+<section id="section-41" class="section tone-5 layout-image" data-section="41">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">41 · Suivi</p>
+      <h2>41. Je surveille les tâches en cours</h2>
+      <p>Les monitors indiquent si le script progresse, bloque ou travaille sur une étape longue.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/15-codex-arret-enrichissement.jpg" alt="Je garde le contrôle sur les tâches Codex quand l&#x27;enrichissement tourne." loading="lazy">
+      <figcaption>Je garde le contrôle sur les tâches Codex quand l&#x27;enrichissement tourne.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-42" class="section tone-6 layout-prompt" data-section="42">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">42 · Prompt de suivi</p>
+      <h2>42. Je demande le temps restant</h2>
+      <p>Ce prompt sert à obtenir une estimation claire quand une tâche longue tourne.</p>
+    </div>
+    <div class="prompt-card">
+      <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+      <pre><code>Combien de temps reste-t-il selon toi pour le téléchargement SIRENE, le filtrage HORECA et le matching local ?
+Donne-moi une estimation simple et dis-moi quelle étape est en cours.</code></pre>
+    </div>
+  </div>
+</section>
+
+<section id="section-43" class="section tone-1 layout-diagnostic" data-section="43">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">43 · Premier blocage</p>
+      <h2>43. Le premier résultat trouve trop peu de SIREN</h2>
+      <p>Je constate que l&#x27;API seule ne couvre pas assez de lignes. Je ne valide pas une sortie faible juste parce qu&#x27;elle est générée.</p>
+    </div><div class="diagnostic"><div><b>Ce qui bloque</b><p>Peu de SIREN trouvés, trop de `NOT_FOUND`, couverture insuffisante.</p></div><div><b>Comment je corrige</b><p>Demander une stratégie plus robuste avec dataset local et matching plus tolérant.</p></div></div>
+  </div>
+</section>
+
+<section id="section-44" class="section tone-2 layout-prompt" data-section="44">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">44 · Relance</p>
+      <h2>44. Je reformule le problème</h2>
+      <p>Ce prompt sert à faire analyser l&#x27;échec au lieu de relancer la même méthode.</p>
+    </div>
+    <div class="prompt-card">
+      <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+      <pre><code>Le premier enrichissement ne trouve pas assez de SIREN.
+Analyse pourquoi le matching échoue et propose une stratégie plus robuste.
+Je veux améliorer la couverture SIREN/SIRET sans écraser les colonnes existantes.
+Garde les colonnes d&#x27;origine et ajoute uniquement des colonnes dg_*.</code></pre>
+    </div>
+  </div>
+</section>
+
+<section id="section-45" class="section tone-3 layout-prompt" data-section="45">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">45 · Stratégie</p>
+      <h2>45. Je vérifie si la stratégie tient</h2>
+      <p>Je demande à Codex d&#x27;évaluer sa méthode. S&#x27;il répond que ce n&#x27;est pas suffisant, je veux une source et une correction précises.</p>
+    </div>
+    <div class="prompt-card">
+      <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+      <pre><code>Est-ce que la stratégie actuelle est suffisante ?
+Si non, dis-moi précisément quelle source utiliser, pourquoi elle améliore le matching et ce que tu vas changer dans le script.</code></pre>
+    </div>
+  </div>
+</section>
+
+<section id="section-46" class="section tone-4 layout-image" data-section="46">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">46 · SIRENE local</p>
+      <h2>46. Je passe au bulk SIRENE</h2>
+      <p>Quand l&#x27;API ne suffit pas, je télécharge un dataset plus large et je fais le matching localement. C&#x27;est plus lourd, mais beaucoup plus puissant.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/19-suivi-telechargement-sirene.jpg" alt="Le téléchargement SIRENE et le matching local prennent du temps." loading="lazy">
+      <figcaption>Le téléchargement SIRENE et le matching local prennent du temps.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-47" class="section tone-5 layout-prompt" data-section="47">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">47 · Prompt bulk</p>
+      <h2>47. Je lance le matching local</h2>
+      <p>Ce prompt sert à basculer vers une stratégie locale : filtrer HORECA, matcher et reconstruire le classeur.</p>
+    </div>
+    <div class="prompt-card">
+      <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+      <pre><code>Télécharge le dataset SIRENE établissements en local.
+Filtre les établissements actifs HORECA.
+Fais un matching local sur nom + ville + code postal + distance + activité.
+Reconstruis le XLSX avec les colonnes dg_*.
+Crée aussi les onglets READY_FOR_APIFY, TO_VERIFY, NOT_FOUND et DATA_GOUV_LEDGER.</code></pre>
+    </div>
+  </div>
+</section>
+
+<section id="section-48" class="section tone-6 layout-table" data-section="48">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">48 · Changement</p>
+      <h2>48. API seule vs dataset local</h2>
+      <p>Je change de méthode parce que le signal API n&#x27;est pas assez fort.</p>
+    </div><div class="table-wrap"><table><thead><tr><th>Approche</th><th>Avantage</th><th>Limite</th></tr></thead><tbody><tr><td>API seule</td><td>Rapide, simple, sans gros fichier</td><td>Trop de résultats manquants</td></tr><tr><td>near_point</td><td>Bon pour la proximité</td><td>Adresse partagée = ambiguïté</td></tr><tr><td>Bulk SIRENE local</td><td>Couverture massive et matching contrôlé</td><td>Plus long, besoin de filtres</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<section id="section-49" class="section tone-1 layout-alert" data-section="49">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">49 · Temps</p>
+      <h2>49. Je laisse le temps aux tâches utiles</h2>
+      <p>Un bon enrichissement de 11 839 lignes peut prendre du temps. Ce n&#x27;est pas un bug si le traitement dure plusieurs minutes.</p>
+    </div><aside class="alert-box"><b>Point de vigilance</b><p>La vraie question n&#x27;est pas : est-ce rapide ? La vraie question est : est-ce que la couverture augmente proprement ?</p></aside>
+  </div>
+</section>
+
+<section id="section-50" class="section tone-2 layout-image" data-section="50">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">50 · Monitors</p>
+      <h2>50. Plusieurs tâches peuvent tourner en parallèle</h2>
+      <p>Je lis les monitors comme des agents spécialisés : téléchargement, filtrage, matching, rebuild du XLSX.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/29-terminal-resultats-data-gouv.jpg" alt="Le terminal récapitule les résultats de l&#x27;enrichissement." loading="lazy">
+      <figcaption>Le terminal récapitule les résultats de l&#x27;enrichissement.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-51" class="section tone-3 layout-prompt" data-section="51">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">51 · Stop propre</p>
+      <h2>51. Si une tâche part trop loin, je l&#x27;arrête proprement</h2>
+      <p>Ce prompt sert quand je veux interrompre sans perdre ce qui a déjà été sauvegardé.</p>
+    </div>
+    <div class="prompt-card">
+      <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+      <pre><code>Annule la tâche en cours proprement.
+Vérifie qu&#x27;aucun processus d&#x27;enrichissement ne tourne encore.
+Dis-moi ce qui a déjà été sauvegardé et ce qu&#x27;on peut reprendre plus tard.</code></pre>
+    </div>
+  </div>
+</section>
+
+<section id="section-52" class="section tone-4 layout-quote" data-section="52">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">52 · Itération</p>
+      <h2>52. Le one-shot n&#x27;est pas la méthode</h2>
+      <p>Je construis, je mesure, je corrige, je relance. C&#x27;est comme ça que la compétence IA devient professionnelle.</p>
+    </div><blockquote>Prompt, résultat, diagnostic, amélioration : c&#x27;est la boucle à garder.</blockquote>
+  </div>
+</section>
+
+<section id="section-53" class="section tone-5 layout-before" data-section="53">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">53 · Résultat</p>
+      <h2>53. La V2 change tout</h2>
+      <p>Le matching local améliore fortement la base.</p>
+    </div><div class="before-after"><div><span>Avant</span><p>API seule : couverture faible, trop de `NOT_FOUND`, peu de leads prêts.</p></div><div><span>Après</span><p>Bulk SIRENE local : environ 10 143 SIREN/SIRET, 3 853 HIGH, 4 190 prêts Apify.</p></div></div>
+  </div>
+</section>
+
+<section id="section-54" class="section tone-6 layout-image" data-section="54">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">54 · Chiffres</p>
+      <h2>54. Je lis les chiffres de progression</h2>
+      <p>Le terminal indique les gains : leads traités, SIREN trouvés, HIGH, MEDIUM, non trouvés et prêts pour Apify.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/29-terminal-resultats-data-gouv.jpg" alt="Le terminal récapitule les résultats de l&#x27;enrichissement." loading="lazy">
+      <figcaption>Le terminal récapitule les résultats de l&#x27;enrichissement.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-55" class="section tone-1 layout-image" data-section="55">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">55 · Import</p>
+      <h2>55. J&#x27;ouvre le fichier dans Google Sheets</h2>
+      <p>Pour inspecter un gros XLSX, Google Sheets donne une lecture plus confortable. Je peux filtrer, figer les lignes et vérifier les onglets.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/20-import-google-sheets.jpg" alt="Google Sheets permet d&#x27;inspecter le classeur enrichi." loading="lazy">
+      <figcaption>Google Sheets permet d&#x27;inspecter le classeur enrichi.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-56" class="section tone-2 layout-image" data-section="56">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">56 · Sélection</p>
+      <h2>56. Je dois choisir le bon fichier</h2>
+      <p>Je me trompe de fichier au départ. C&#x27;est une vraie leçon : si les dossiers sont mal rangés, tu perds du temps au contrôle.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/27-selecteur-fichier-google.jpg" alt="Le sélecteur de fichiers impose une organisation stricte." loading="lazy">
+      <figcaption>Le sélecteur de fichiers impose une organisation stricte.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-57" class="section tone-3 layout-alert" data-section="57">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">57 · Organisation</p>
+      <h2>57. Le piège n&#x27;est pas technique</h2>
+      <p>L&#x27;erreur n&#x27;est pas data.gouv. L&#x27;erreur, c&#x27;est d&#x27;ouvrir le mauvais fichier parce que plusieurs exports se ressemblent.</p>
+    </div><aside class="alert-box"><b>Point de vigilance</b><p>Nomme les fichiers clairement et garde une seule sortie officielle pour la séance.</p></aside>
+  </div>
+</section>
+
+<section id="section-58" class="section tone-4 layout-image" data-section="58">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">58 · Dashboard</p>
+      <h2>58. Le dashboard donne le premier contrôle</h2>
+      <p>Je vérifie le volume total, les segments, les villes, les emails présents, les classes et les scores.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/21-dashboard-leads-massif.jpg" alt="Le dashboard résume le volume et les segments." loading="lazy">
+      <figcaption>Le dashboard résume le volume et les segments.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-59" class="section tone-5 layout-cards" data-section="59">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">59 · KPI</p>
+      <h2>59. Les KPI que je veux lire immédiatement</h2>
+      <p>Une base enrichie doit parler vite.</p>
+    </div><div class="cards"><article><strong>11 839</strong><p>Leads dédupliqués.</p></article><article><strong>10 143</strong><p>SIREN / SIRET trouvés après amélioration.</p></article><article><strong>3 853</strong><p>HIGH_CONFIDENCE.</p></article><article><strong>4 190</strong><p>Prêts pour Apify.</p></article><article><strong>1 780</strong><p>Non trouvés à reprendre ou exclure.</p></article></div>
+  </div>
+</section>
+
+<section id="section-60" class="section tone-6 layout-image" data-section="60">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">60 · All leads</p>
+      <h2>60. L&#x27;onglet principal garde tout</h2>
+      <p>Je dois voir les colonnes d&#x27;origine puis les colonnes data.gouv. L&#x27;enrichissement ne doit pas remplacer le travail commercial.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/22-all-leads-enrichis.jpg" alt="L&#x27;onglet principal conserve les colonnes d&#x27;origine et ajoute les données." loading="lazy">
+      <figcaption>L&#x27;onglet principal conserve les colonnes d&#x27;origine et ajoute les données.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-61" class="section tone-1 layout-prompt" data-section="61">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">61 · Colonnes</p>
+      <h2>61. Je demande où sont les colonnes dg_*</h2>
+      <p>Quand je ne vois pas les informations, je ne devine pas : je demande à Codex dans quel onglet elles ont été ajoutées.</p>
+    </div>
+    <div class="prompt-card">
+      <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+      <pre><code>C&#x27;est dans quel onglet que tu as ajouté les informations dg_* ?
+Liste les onglets concernés et les colonnes ajoutées.
+Dis-moi aussi si les colonnes d&#x27;origine ont été conservées.</code></pre>
+    </div>
+  </div>
+</section>
+
+<section id="section-62" class="section tone-2 layout-image" data-section="62">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">62 · Réponse</p>
+      <h2>62. Codex liste les onglets enrichis</h2>
+      <p>La réponse me permet de vérifier que `ALL_LEADS_ENRICHED`, `READY_FOR_APIFY`, `TO_VERIFY` et `NOT_FOUND` contiennent bien les colonnes `dg_*`.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/26-colonnes-dg-par-onglet.jpg" alt="Codex indique où les colonnes dg_* ont été ajoutées." loading="lazy">
+      <figcaption>Codex indique où les colonnes dg_* ont été ajoutées.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-63" class="section tone-3 layout-image" data-section="63">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">63 · Scoring</p>
+      <h2>63. Les règles doivent être visibles</h2>
+      <p>Je garde un onglet de règles pour comprendre comment les priorités et les scores sont calculés.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/23-regles-scoring-priorite.jpg" alt="Les règles de scoring rendent la priorité lisible." loading="lazy">
+      <figcaption>Les règles de scoring rendent la priorité lisible.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-64" class="section tone-4 layout-image" data-section="64">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">64 · Déduplication</p>
+      <h2>64. La déduplication protège la base</h2>
+      <p>Un même établissement peut apparaître plusieurs fois avec des sources différentes. Les clés fusionnées m&#x27;aident à garder une base propre.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/24-deduplication-merged-keys.jpg" alt="La déduplication évite de compter plusieurs fois la même entreprise." loading="lazy">
+      <figcaption>La déduplication évite de compter plusieurs fois la même entreprise.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-65" class="section tone-5 layout-image" data-section="65">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">65 · Géographie</p>
+      <h2>65. La heatmap aide à décider où prospecter</h2>
+      <p>Une fois les leads enrichis, je peux regarder les villes et régions où le volume est le plus intéressant.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/25-geo-heatmap-villes.jpg" alt="La heatmap aide à comprendre les zones les plus exploitables." loading="lazy">
+      <figcaption>La heatmap aide à comprendre les zones les plus exploitables.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-66" class="section tone-6 layout-table" data-section="66">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">66 · READY_FOR_APIFY</p>
+      <h2>66. Je prépare seulement les bons leads pour Apify</h2>
+      <p>Apify servira à chercher plus de données de contact. Je ne veux pas dépenser du temps ou du crédit sur des leads faibles.</p>
+    </div><div class="table-wrap"><table><thead><tr><th>Condition</th><th>Pourquoi</th></tr></thead><tbody><tr><td>HIGH_CONFIDENCE ou MEDIUM_CONFIDENCE</td><td>La base légale est assez fiable</td></tr><tr><td>website ou domain non vide</td><td>Apify peut scraper une source web</td></tr><tr><td>statut actif</td><td>Je ne prospecte pas une entreprise fermée</td></tr><tr><td>notes contrôlées</td><td>Les cas ambigus restent en vérification</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<section id="section-67" class="section tone-1 layout-image" data-section="67">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">67 · Fiche légale</p>
+      <h2>67. Je peux ouvrir une fiche officielle</h2>
+      <p>La fiche légale donne le SIREN, le SIRET, l&#x27;activité, l&#x27;adresse et parfois le décideur. C&#x27;est la preuve que le matching n&#x27;est pas un simple texte généré.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/28-fiche-legale-entreprise.jpg" alt="Une fiche légale confirme SIREN, SIRET, activité et adresse." loading="lazy">
+      <figcaption>Une fiche légale confirme SIREN, SIRET, activité et adresse.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-68" class="section tone-2 layout-cards" data-section="68">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">68 · Données utiles</p>
+      <h2>68. Ce que j&#x27;exploite commercialement</h2>
+      <p>Toutes les données ne servent pas au même moment.</p>
+    </div><div class="cards"><article><strong>SIREN/SIRET</strong><p>Identifier l&#x27;entreprise et éviter les doublons.</p></article><article><strong>Dirigeant</strong><p>Personnaliser ou orienter la recherche de contact.</p></article><article><strong>APE/NAF</strong><p>Vérifier le secteur.</p></article><article><strong>Effectif/CA</strong><p>Adapter le niveau d&#x27;offre.</p></article><article><strong>Adresse</strong><p>Comprendre la zone et la densité locale.</p></article></div>
+  </div>
+</section>
+
+<section id="section-69" class="section tone-3 layout-prompt" data-section="69">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">69 · Contrôle final</p>
+      <h2>69. Je demande une vérification complète</h2>
+      <p>Avant de considérer la séance terminée, je demande à Codex de contrôler le classeur final.</p>
+    </div>
+    <div class="prompt-card">
+      <div class="prompt-head"><span>Prompt à copier</span><button class="copy-btn" type="button">Copier</button></div>
+      <pre><code>Contrôle le classeur final avant de finir :
+- les colonnes dg_* existent
+- aucune colonne d&#x27;origine n&#x27;a été supprimée
+- dg_match_score est entre 0 et 100
+- READY_FOR_APIFY contient seulement HIGH/MEDIUM avec website ou domain
+- TO_VERIFY contient les cas ambigus
+- NOT_FOUND contient les lignes sans match fiable
+Réponds avec les chiffres clés et les fichiers créés.</code></pre>
+    </div>
+  </div>
+</section>
+
+<section id="section-70" class="section tone-4 layout-image" data-section="70">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">70 · Classeur final</p>
+      <h2>70. La base devient prête pour la suite</h2>
+      <p>Le classeur final contient les lignes enrichies, les statuts, les onglets d&#x27;action et les contrôles. C&#x27;est la base qui partira vers Apify.</p>
+    </div>
+    <figure class="media">
+      <img src="img/session-16/30-classeur-final-verification.jpg" alt="Le classeur final sert de base pour l&#x27;étape Apify." loading="lazy">
+      <figcaption>Le classeur final sert de base pour l&#x27;étape Apify.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="section-71" class="section tone-5 layout-timeline" data-section="71">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">71 · Histoire</p>
+      <h2>71. La séance suit une vraie boucle de production</h2>
+      <p>Ce n&#x27;est pas une démonstration linéaire. C&#x27;est une construction avec diagnostic.</p>
+    </div><div class="timeline"><article><span>1</span><p>Je pars du fichier Serper.</p></article><article><span>2</span><p>Je comprends data.gouv.</p></article><article><span>3</span><p>Je lance le prompt maître.</p></article><article><span>4</span><p>Je constate que la V1 est insuffisante.</p></article><article><span>5</span><p>Je passe au bulk SIRENE local.</p></article><article><span>6</span><p>Je vérifie le XLSX enrichi.</p></article></div>
+  </div>
+</section>
+
+<section id="section-72" class="section tone-6 layout-diagnostic" data-section="72">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">72 · Erreur fréquente</p>
+      <h2>72. Tu peux croire que l&#x27;IA a échoué trop vite</h2>
+      <p>Un premier résultat faible ne veut pas dire que la méthode est mauvaise. Il faut comprendre quelle source manque.</p>
+    </div><div class="diagnostic"><div><b>Ce qui bloque</b><p>Relancer le même prompt en espérant un meilleur résultat.</p></div><div><b>Comment je corrige</b><p>Changer la source, filtrer localement, enrichir le contexte et refaire le matching.</p></div></div>
+  </div>
+</section>
+
+<section id="section-73" class="section tone-1 layout-diagnostic" data-section="73">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">73 · Erreur fréquente</p>
+      <h2>73. Tu peux confondre société et établissement</h2>
+      <p>Un restaurant est souvent un établissement, pas seulement une société.</p>
+    </div><div class="diagnostic"><div><b>Ce qui bloque</b><p>Matcher uniquement sur la raison sociale.</p></div><div><b>Comment je corrige</b><p>Comparer nom commercial, établissement, adresse, distance et activité.</p></div></div>
+  </div>
+</section>
+
+<section id="section-74" class="section tone-2 layout-diagnostic" data-section="74">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">74 · Erreur fréquente</p>
+      <h2>74. Tu peux contacter trop tôt</h2>
+      <p>Une base enrichie doit réduire le risque de mauvais contact.</p>
+    </div><div class="diagnostic"><div><b>Ce qui bloque</b><p>Envoyer à tous les leads, même `LOW_CONFIDENCE` ou `NOT_FOUND`.</p></div><div><b>Comment je corrige</b><p>Limiter l&#x27;étape Apify aux HIGH/MEDIUM avec site ou domaine.</p></div></div>
+  </div>
+</section>
+
+<section id="section-75" class="section tone-3 layout-table" data-section="75">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">75 · Décision</p>
+      <h2>75. Tableau de décision pour la suite</h2>
+      <p>Après data.gouv, chaque ligne a une action logique.</p>
+    </div><div class="table-wrap"><table><thead><tr><th>Cas</th><th>Action</th></tr></thead><tbody><tr><td>HIGH + website</td><td>Passer à Apify</td></tr><tr><td>MEDIUM + website</td><td>Passer à Apify avec prudence</td></tr><tr><td>ADDRESS_ONLY_CHECK</td><td>Vérifier manuellement ou avec un prompt ciblé</td></tr><tr><td>LOW_CONFIDENCE</td><td>Corriger la source avant contact</td></tr><tr><td>NOT_FOUND</td><td>Exclure ou relancer avec une nouvelle stratégie</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<section id="section-76" class="section tone-4 layout-method" data-section="76">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">76 · Méthode IA</p>
+      <h2>76. La compétence que tu dois garder</h2>
+      <p>Cette séance montre comment travailler avec une IA qui exécute.</p>
+    </div><ol class="method"><li><span>01</span><p>Donner une mission claire.</p></li><li><span>02</span><p>Définir les fichiers d&#x27;entrée et de sortie.</p></li><li><span>03</span><p>Forcer les contraintes.</p></li><li><span>04</span><p>Lire le premier résultat.</p></li><li><span>05</span><p>Diagnostiquer l&#x27;écart.</p></li><li><span>06</span><p>Changer la stratégie.</p></li><li><span>07</span><p>Contrôler le fichier final.</p></li></ol>
+  </div>
+</section>
+
+<section id="section-77" class="section tone-5 layout-cards" data-section="77">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">77 · Checklist</p>
+      <h2>77. Checklist avant de quitter la séance</h2>
+      <p>Tu peux refaire la séance avec ton propre secteur si ces points sont vrais.</p>
+    </div><div class="cards"><article><strong>Fichier source</strong><p>Une base de leads propre et dédupliquée.</p></article><article><strong>Prompt</strong><p>APIs, colonnes, statuts et sorties définis.</p></article><article><strong>Caches</strong><p>Réponses sauvegardées pour éviter de recommencer.</p></article><article><strong>Onglets</strong><p>READY, VERIFY, NOT_FOUND bien séparés.</p></article><article><strong>Preuves</strong><p>Liens et notes pour contrôler les matchs.</p></article></div>
+  </div>
+</section>
+
+<section id="section-78" class="section tone-6 layout-quote" data-section="78">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">78 · À retenir</p>
+      <h2>78. Le vrai gain est la fiabilité</h2>
+      <p>Une base avec moins de bruit coûte moins cher à enrichir et donne une meilleure prospection.</p>
+    </div><blockquote>Je ne cherche pas plus de leads. Je cherche des leads que je peux exploiter sans me mentir.</blockquote>
+  </div>
+</section>
+
+<section id="section-79" class="section tone-1 layout-flow" data-section="79">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">79 · Prochaine séance</p>
+      <h2>79. La suite logique est Apify</h2>
+      <p>Maintenant que je sais quelles entreprises sont fiables, je peux lancer une recherche de contacts plus ciblée.</p>
+    </div><div class="flow"><span>READY_FOR_APIFY</span><span>Apify</span><span>emails</span><span>pages contact</span><span>nettoyage</span><span>prospection</span></div>
+  </div>
+</section>
+
+<section id="section-80" class="section tone-2 layout-final" data-section="80">
+  <div class="wrap">
+    
+    <div class="section-copy">
+      <p class="kicker">80 · Récap</p>
+      <h2>80. Ce que tu dois avoir à la fin</h2>
+      <p>Tu dois sortir avec un classeur enrichi, des statuts de confiance, des onglets d&#x27;action et une méthode d&#x27;itération claire.</p>
+    </div><div class="final-card"><ul><li>Un fichier `leads-data-gouv-enriched.xlsx`.</li><li>Des colonnes `dg_*` ajoutées sans écraser le reste.</li><li>Des leads HIGH/MEDIUM prêts pour Apify.</li><li>Des cas ambigus rangés dans TO_VERIFY.</li><li>Une compréhension claire de data.gouv comme couche de vérité.</li></ul></div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <p>DENEM Academy · Séance 16 · Transcription disponible dans <a href="transcription/seance-16-data-gouv-transcription.md">le dossier transcription</a>.</p>
+</footer>
+<script>
+const progress=document.getElementById('progress');
+function updateProgress(){const h=document.documentElement;const max=h.scrollHeight-h.clientHeight;progress.style.width=(max?window.scrollY/max*100:0)+'%'}
+document.addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+document.querySelectorAll('.copy-btn').forEach(btn=>{btn.addEventListener('click',async()=>{const code=btn.closest('.prompt-card').querySelector('code').innerText;await navigator.clipboard.writeText(code);const old=btn.innerText;btn.innerText='Copié';setTimeout(()=>btn.innerText=old,1200)})});
+</script>
+</body>
+</html>

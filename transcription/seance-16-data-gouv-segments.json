@@ -1,0 +1,2535 @@
+{
+  "video": "SEANCE 15 ENRICHIR AVEC DATA GOUV.mp4",
+  "duration": 2690.88,
+  "language": "fr",
+  "segments": [
+    {
+      "id": 1,
+      "start": 0.24,
+      "end": 6.24,
+      "start_label": "00:00",
+      "end_label": "00:06",
+      "text": "C'est parti, on attaque du coup maintenant la séance 16, on va enrichir avec DataGouv."
+    },
+    {
+      "id": 2,
+      "start": 6.24,
+      "end": 13.24,
+      "start_label": "00:06",
+      "end_label": "00:13",
+      "text": "Donc on va essayer de récupérer le CRN, le dirigeant, le CA et la fiabilité."
+    },
+    {
+      "id": 3,
+      "start": 13.24,
+      "end": 21.24,
+      "start_label": "00:13",
+      "end_label": "00:21",
+      "text": "Donc en gros la liste qu'on a générée lors de la séance précédente,"
+    },
+    {
+      "id": 4,
+      "start": 21.24,
+      "end": 28.24,
+      "start_label": "00:21",
+      "end_label": "00:28",
+      "text": "donc au niveau du XLSX, l'élite qu'on a scrapté avec Google Maps,"
+    },
+    {
+      "id": 5,
+      "start": 28.24,
+      "end": 37.24,
+      "start_label": "00:28",
+      "end_label": "00:37",
+      "text": "et bien on va essayer d'enrichir tous ces leads-là grâce à l'API gratuite de l'État, donc Datagoof."
+    },
+    {
+      "id": 6,
+      "start": 37.24,
+      "end": 40.24,
+      "start_label": "00:37",
+      "end_label": "00:40",
+      "text": "On va voir ça ensemble, donc c'est pas bien complexe encore une fois."
+    },
+    {
+      "id": 7,
+      "start": 40.24,
+      "end": 45.24,
+      "start_label": "00:40",
+      "end_label": "00:45",
+      "text": "On va partir d'un système de prompt. Pourquoi ? Parce que là on n'aura même pas besoin d'écrire l'API."
+    },
+    {
+      "id": 8,
+      "start": 45.24,
+      "end": 53.24,
+      "start_label": "00:45",
+      "end_label": "00:53",
+      "text": "Là on aura juste besoin de lui donner des indications sur comment bien utiliser cet API qui est public,"
+    },
+    {
+      "id": 9,
+      "start": 53.24,
+      "end": 58.04,
+      "start_label": "00:53",
+      "end_label": "00:58",
+      "text": "elle mène pour tout le monde donc nous notre objectif ça va être"
+    },
+    {
+      "id": 10,
+      "start": 58.04,
+      "end": 63.88,
+      "start_label": "00:58",
+      "end_label": "01:04",
+      "text": "d'enrichir ces 10 milles là donc ces 10 milles ça va prendre pas mal de temps"
+    },
+    {
+      "id": 11,
+      "start": 63.88,
+      "end": 66.64,
+      "start_label": "01:04",
+      "end_label": "01:07",
+      "text": "donc comme vous avez pu le voir pour Scrapte avec Google Maps on a pris un"
+    },
+    {
+      "id": 12,
+      "start": 66.64,
+      "end": 72.92,
+      "start_label": "01:07",
+      "end_label": "01:13",
+      "text": "peu près ouais une bonne heure là je pense que ça sera un peu moins mais"
+    },
+    {
+      "id": 13,
+      "start": 72.92,
+      "end": 79.28,
+      "start_label": "01:13",
+      "end_label": "01:19",
+      "text": "ça va enrichir toute cette liste donc c'est le top du top donc c'est"
+    },
+    {
+      "id": 14,
+      "start": 79.28,
+      "end": 86.85,
+      "start_label": "01:19",
+      "end_label": "01:27",
+      "text": "parti. On va voir un petit peu de théories. Donc DataGouv, encore une fois, il ne va pas"
+    },
+    {
+      "id": 15,
+      "start": 86.85,
+      "end": 91.69,
+      "start_label": "01:27",
+      "end_label": "01:32",
+      "text": "trouver des contacts, il va fiabiliser les entreprises qu'on a déjà scraptées."
+    },
+    {
+      "id": 16,
+      "start": 91.69,
+      "end": 96.93,
+      "start_label": "01:32",
+      "end_label": "01:37",
+      "text": "Donc ce que DataGouv va nous apporter, c'est le siren, le siret, la raison sociale, le"
+    },
+    {
+      "id": 17,
+      "start": 96.93,
+      "end": 100.45,
+      "start_label": "01:37",
+      "end_label": "01:40",
+      "text": "nom commerciale, la PE, le dirigeant, l'effectif, les finances publiques et"
+    },
+    {
+      "id": 18,
+      "start": 100.45,
+      "end": 102.45,
+      "start_label": "01:40",
+      "end_label": "01:42",
+      "text": "les statuts actifs. Ça, ça va être important."
+    },
+    {
+      "id": 19,
+      "start": 102.45,
+      "end": 107.81,
+      "start_label": "01:42",
+      "end_label": "01:48",
+      "text": "Encore une fois, notre objectif, c'est quand on enrichit le lead, c'est qu'à la fin,"
+    },
+    {
+      "id": 20,
+      "start": 107.81,
+      "end": 113.45,
+      "start_label": "01:48",
+      "end_label": "01:53",
+      "text": "le message qu'on va envoyer pour la prospection sera extrêmement personnalisé. Donc c'est pour ça"
+    },
+    {
+      "id": 21,
+      "start": 113.45,
+      "end": 117.65,
+      "start_label": "01:53",
+      "end_label": "01:58",
+      "text": "qu'on fait cette étape là. On cherche de l'enrichissement constant. Et ensuite l'étape"
+    },
+    {
+      "id": 22,
+      "start": 117.65,
+      "end": 124.25,
+      "start_label": "01:58",
+      "end_label": "02:04",
+      "text": "prochaine, ça va être la partie API. On va utiliser une clé API payante pour récupérer"
+    },
+    {
+      "id": 23,
+      "start": 124.25,
+      "end": 128.57,
+      "start_label": "02:04",
+      "end_label": "02:09",
+      "text": "l'adresse email pour qu'on puisse envoyer ce message de prospection. Donc la séance 16,"
+    },
+    {
+      "id": 24,
+      "start": 128.57,
+      "end": 133.61,
+      "start_label": "02:09",
+      "end_label": "02:14",
+      "text": "elle est du coup la couche de vérité. On va récupérer le fichier juste ici,"
+    },
+    {
+      "id": 25,
+      "start": 133.61,
+      "end": 141.73,
+      "start_label": "02:14",
+      "end_label": "02:22",
+      "text": "donc leads massif, on va récupérer l'api-adresse, donc l'api-adresse data-goo, on va faire un"
+    },
+    {
+      "id": 26,
+      "start": 141.73,
+      "end": 146.29,
+      "start_label": "02:22",
+      "end_label": "02:26",
+      "text": "recherche d'entreprise, on va faire un scoring match, on va faire un to-veil file et on va faire"
+    },
+    {
+      "id": 27,
+      "start": 146.29,
+      "end": 153.75,
+      "start_label": "02:26",
+      "end_label": "02:34",
+      "text": "ensuite une mise à jour de d'autres fichiers xlsx. Donc deux api suffisent pour faire un"
+    },
+    {
+      "id": 28,
+      "start": 153.75,
+      "end": 159.93,
+      "start_label": "02:34",
+      "end_label": "02:40",
+      "text": "promis enrichissement solide, donc nettoyer et géocoder et trouver l'entité légale. Donc"
+    },
+    {
+      "id": 29,
+      "start": 159.93,
+      "end": 165.01,
+      "start_label": "02:40",
+      "end_label": "02:45",
+      "text": "c'est ces deux API là qu'on va utiliser donc le prompt repart du fichier"
+    },
+    {
+      "id": 30,
+      "start": 165.01,
+      "end": 170.13,
+      "start_label": "02:45",
+      "end_label": "02:50",
+      "text": "serper comme on l'a vu donc colonne serper, colonne compagnie name, adresse"
+    },
+    {
+      "id": 31,
+      "start": 170.13,
+      "end": 175.89,
+      "start_label": "02:50",
+      "end_label": "02:56",
+      "text": "city, website domain, catégorie segment, email phone donc encore une fois on n'a pas"
+    },
+    {
+      "id": 32,
+      "start": 175.89,
+      "end": 180.49,
+      "start_label": "02:56",
+      "end_label": "03:00",
+      "text": "beaucoup d'emails et phones donc on va surtout se concentrer sur ces quatre"
+    },
+    {
+      "id": 33,
+      "start": 180.49,
+      "end": 186.13,
+      "start_label": "03:00",
+      "end_label": "03:06",
+      "text": "colonnes là donc c'est grâce à ça qu'on va pouvoir faire du matching et"
+    },
+    {
+      "id": 34,
+      "start": 186.13,
+      "end": 192.97,
+      "start_label": "03:06",
+      "end_label": "03:13",
+      "text": "trouver du coup les informations manquantes et enrichir un maximum notre fichier en question."
+    },
+    {
+      "id": 35,
+      "start": 192.97,
+      "end": 198.49,
+      "start_label": "03:13",
+      "end_label": "03:18",
+      "text": "Donc les colonnes qu'on va ajouter c'est la partie identité, la partie activité, la partie taille,"
+    },
+    {
+      "id": 36,
+      "start": 198.49,
+      "end": 205.33,
+      "start_label": "03:18",
+      "end_label": "03:25",
+      "text": "la partie matching. Donc en plus de toutes les colonnes qu'on a là, on aura du coup ces"
+    },
+    {
+      "id": 37,
+      "start": 205.33,
+      "end": 212.33,
+      "start_label": "03:25",
+      "end_label": "03:32",
+      "text": "quatre colonnes supplémentaires. Donc le danger au niveau du matching c'est un restaurant peut"
+    },
+    {
+      "id": 38,
+      "start": 212.33,
+      "end": 218.77,
+      "start_label": "03:32",
+      "end_label": "03:39",
+      "text": "exploiter, en l'occurrence un restaurant, mais vous pouvez avoir la même problématique que"
+    },
+    {
+      "id": 39,
+      "start": 218.77,
+      "end": 223.77,
+      "start_label": "03:39",
+      "end_label": "03:44",
+      "text": "moi, peut être exploité par une société dont le juste juridique est différent. Mais une même"
+    },
+    {
+      "id": 40,
+      "start": 223.77,
+      "end": 231.13,
+      "start_label": "03:44",
+      "end_label": "03:51",
+      "text": "adresse peut aussi contenir plusieurs sociétés. Le Pondoc doit croiser nos enseignes, adresses"
+    },
+    {
+      "id": 41,
+      "start": 231.13,
+      "end": 237.21,
+      "start_label": "03:51",
+      "end_label": "03:57",
+      "text": "distantes, codes APE et statuaires actifs. Donc c'est pour ça qu'on va faire tout simplement"
+    },
+    {
+      "id": 42,
+      "start": 237.21,
+      "end": 247.15,
+      "start_label": "03:57",
+      "end_label": "04:07",
+      "text": "un score par leads croisés. Donc la base, encore une fois, de DataGouv doit dire quoi vérifier."
+    },
+    {
+      "id": 43,
+      "start": 247.15,
+      "end": 253.15,
+      "start_label": "04:07",
+      "end_label": "04:13",
+      "text": "Donc hide confidence, median confidence, address and need check, low confidence, mode found."
+    },
+    {
+      "id": 44,
+      "start": 253.15,
+      "end": 261.19,
+      "start_label": "04:13",
+      "end_label": "04:21",
+      "text": "Donc au niveau de la définition, hide confidence c'est nom ou enceinte cohérente plus adresse"
+    },
+    {
+      "id": 45,
+      "start": 261.19,
+      "end": 267.31,
+      "start_label": "04:21",
+      "end_label": "04:27",
+      "text": "cohérente plus activité cohérente. Donc là on peut passer à PIFI. Ensuite medium"
+    },
+    {
+      "id": 46,
+      "start": 267.31,
+      "end": 272.87,
+      "start_label": "04:27",
+      "end_label": "04:33",
+      "text": "confidence, non partiellement cohérent ou société d'exploitation probable."
+    },
+    {
+      "id": 47,
+      "start": 272.87,
+      "end": 278.79,
+      "start_label": "04:33",
+      "end_label": "04:39",
+      "text": "On peut passer à PIFI mais garder une note. Donc adresse only check, donc adresse bonne mais"
+    },
+    {
+      "id": 48,
+      "start": 278.79,
+      "end": 282.15,
+      "start_label": "04:39",
+      "end_label": "04:42",
+      "text": "non différent ou ambiguë, vérification manuelle. Ça sera à nous d'aller checker."
+    },
+    {
+      "id": 49,
+      "start": 282.15,
+      "end": 287.31,
+      "start_label": "04:42",
+      "end_label": "04:47",
+      "text": "On pourra le faire en MCP ou autrement. Donc low confidence, résultat faible ou trop loin,"
+    },
+    {
+      "id": 50,
+      "start": 287.31,
+      "end": 293.19,
+      "start_label": "04:47",
+      "end_label": "04:53",
+      "text": "ne pas contacter à vos corrections. Notre fund, aucun match fiable, recherchez"
+    },
+    {
+      "id": 51,
+      "start": 293.19,
+      "end": 297.35,
+      "start_label": "04:53",
+      "end_label": "04:57",
+      "text": "manuellement ou exclure. Donc nous, quand on va passer sur l'enrichissement"
+    },
+    {
+      "id": 52,
+      "start": 297.35,
+      "end": 301.23,
+      "start_label": "04:57",
+      "end_label": "05:01",
+      "text": "final, il faut qu'on ait soit du médium soit du height, comme ça on est sûr que"
+    },
+    {
+      "id": 53,
+      "start": 301.23,
+      "end": 307.23,
+      "start_label": "05:01",
+      "end_label": "05:07",
+      "text": "le leads il est intéressant. Donc les résultats attendus, encore une fois, c'est"
+    },
+    {
+      "id": 54,
+      "start": 307.23,
+      "end": 310.79,
+      "start_label": "05:07",
+      "end_label": "05:11",
+      "text": "le CIREL, la PE et le CA quand les finances sont disponibles. Ça c'est pas"
+    },
+    {
+      "id": 55,
+      "start": 310.79,
+      "end": 316.79,
+      "start_label": "05:11",
+      "end_label": "05:17",
+      "text": "encore disponible constamment, sinon il faudra utiliser PAYPERS et PAYPERS c'est"
+    },
+    {
+      "id": 56,
+      "start": 316.79,
+      "end": 320.95,
+      "start_label": "05:17",
+      "end_label": "05:21",
+      "text": "payants c'est extrêmement cher. Là on cherche vraiment à créer une base de leads"
+    },
+    {
+      "id": 57,
+      "start": 320.95,
+      "end": 326.09,
+      "start_label": "05:21",
+      "end_label": "05:26",
+      "text": "solides en full free. Donc même Happyfile avec un compte gratuit de 5"
+    },
+    {
+      "id": 58,
+      "start": 326.09,
+      "end": 332.01,
+      "start_label": "05:26",
+      "end_label": "05:32",
+      "text": "dollars on pourra enrichir les leads qu'on a passé en high confidence et"
+    },
+    {
+      "id": 59,
+      "start": 332.01,
+      "end": 335.49,
+      "start_label": "05:32",
+      "end_label": "05:35",
+      "text": "medium confidence. Donc la préparation avant de coller le"
+    },
+    {
+      "id": 60,
+      "start": 335.49,
+      "end": 343.37,
+      "start_label": "05:35",
+      "end_label": "05:43",
+      "text": "prompt, encore une fois on passe sur notre dossier, mon business, mon"
+    },
+    {
+      "id": 61,
+      "start": 343.37,
+      "end": 350.14,
+      "start_label": "05:43",
+      "end_label": "05:50",
+      "text": "business, Prospect, clique gauche, nouveau terminal au dossier. Si vous n'avez pas"
+    },
+    {
+      "id": 62,
+      "start": 350.14,
+      "end": 356.08,
+      "start_label": "05:50",
+      "end_label": "05:56",
+      "text": "fermé la session d'avant, vous avez scrapté les leads via Google Maps."
+    },
+    {
+      "id": 63,
+      "start": 356.08,
+      "end": 365.37,
+      "start_label": "05:56",
+      "end_label": "06:05",
+      "text": "Moi, en l'occurrence, j'ai toujours mon terminal ouvert à cloud code où j'ai"
+    },
+    {
+      "id": 64,
+      "start": 365.37,
+      "end": 369.29,
+      "start_label": "06:05",
+      "end_label": "06:09",
+      "text": "scrapté les leads avec Google Maps. Donc je peux continuer dessus. Il est bien"
+    },
+    {
+      "id": 65,
+      "start": 369.29,
+      "end": 374.33,
+      "start_label": "06:09",
+      "end_label": "06:14",
+      "text": "connecté à 06 Prospect, j'ai bien dedans mon dossier leads avec toutes"
+    },
+    {
+      "id": 66,
+      "start": 374.33,
+      "end": 379.27,
+      "start_label": "06:14",
+      "end_label": "06:19",
+      "text": "les informations. Donc maintenant ce que je dois faire, c'est donner le dossier du"
+    },
+    {
+      "id": 67,
+      "start": 379.27,
+      "end": 389.99,
+      "start_label": "06:19",
+      "end_label": "06:30",
+      "text": "coup à Cloud Code, copier le prompt, le coller et ensuite tout simplement taper"
+    },
+    {
+      "id": 68,
+      "start": 389.99,
+      "end": 398.45,
+      "start_label": "06:30",
+      "end_label": "06:38",
+      "text": "entrée. Là il a toutes les informations pour travailler en autonomie. Donc on"
+    },
+    {
+      "id": 69,
+      "start": 398.45,
+      "end": 402.87,
+      "start_label": "06:38",
+      "end_label": "06:43",
+      "text": "va voir un petit peu en détail la partie data-gouv-leads."
+    },
+    {
+      "id": 70,
+      "start": 402.87,
+      "end": 408.87,
+      "start_label": "06:43",
+      "end_label": "06:49",
+      "text": "Là on peut voir mon article, c'est top, il est bien positionné, donc c'était un lit de maniètes."
+    },
+    {
+      "id": 71,
+      "start": 408.87,
+      "end": 416.22,
+      "start_label": "06:49",
+      "end_label": "06:56",
+      "text": "Donc data.google.fr, donc là on va ici."
+    },
+    {
+      "id": 72,
+      "start": 416.22,
+      "end": 421.22,
+      "start_label": "06:56",
+      "end_label": "07:01",
+      "text": "Et là on a un jeu de données IAPI de 74000, donc informations."
+    },
+    {
+      "id": 73,
+      "start": 421.22,
+      "end": 425.22,
+      "start_label": "07:01",
+      "end_label": "07:05",
+      "text": "On a la base sérène qu'on va utiliser avec INSEE."
+    },
+    {
+      "id": 74,
+      "start": 425.22,
+      "end": 430.22,
+      "start_label": "07:05",
+      "end_label": "07:10",
+      "text": "On a le répertoire national des élus, ça on va pas l'utiliser encore une fois, c'est pas ce qui nous intéresse."
+    },
+    {
+      "id": 75,
+      "start": 430.22,
+      "end": 439.22,
+      "start_label": "07:10",
+      "end_label": "07:19",
+      "text": "Mais on a des informations super intéressantes, qui sont totalement gratuites et en plus de ça, c'est l'état qui nous les mentionne."
+    },
+    {
+      "id": 76,
+      "start": 439.22,
+      "end": 442.22,
+      "start_label": "07:19",
+      "end_label": "07:22",
+      "text": "Donc c'est vraiment très utile."
+    },
+    {
+      "id": 77,
+      "start": 442.22,
+      "end": 448.22,
+      "start_label": "07:22",
+      "end_label": "07:28",
+      "text": "Donc demande de valeur foncière, base de sirene des entreprises, c'est ça qu'on veut utiliser."
+    },
+    {
+      "id": 78,
+      "start": 448.22,
+      "end": 453.22,
+      "start_label": "07:28",
+      "end_label": "07:33",
+      "text": "Donc l'API elle est publique, on n'est pas obligé d'en créer une."
+    },
+    {
+      "id": 79,
+      "start": 453.22,
+      "end": 459.98,
+      "start_label": "07:33",
+      "end_label": "07:40",
+      "text": "Donc là on peut avoir la description, l'institut national des statistiques économiques,"
+    },
+    {
+      "id": 80,
+      "start": 459.98,
+      "end": 463.66,
+      "start_label": "07:40",
+      "end_label": "07:44",
+      "text": "collecte, produit, analyse et diffuse des informations sur l'économie et les"
+    },
+    {
+      "id": 81,
+      "start": 463.66,
+      "end": 468.86,
+      "start_label": "07:44",
+      "end_label": "07:49",
+      "text": "sociétés françaises. C'est en fait, je ne sais pas pourquoi"
+    },
+    {
+      "id": 82,
+      "start": 468.86,
+      "end": 473.7,
+      "start_label": "07:49",
+      "end_label": "07:54",
+      "text": "il nous donne toutes ces informations, en tout cas c'est une mine d'or, c'est une"
+    },
+    {
+      "id": 83,
+      "start": 473.7,
+      "end": 477.02,
+      "start_label": "07:54",
+      "end_label": "07:57",
+      "text": "mine d'or parce que vous n'êtes pas obligé de payer des services comme"
+    },
+    {
+      "id": 84,
+      "start": 477.02,
+      "end": 482.1,
+      "start_label": "07:57",
+      "end_label": "08:02",
+      "text": "Apporio pour enrichir vos leads. Là on se base vraiment sur quelque chose"
+    },
+    {
+      "id": 85,
+      "start": 482.1,
+      "end": 488.5,
+      "start_label": "08:02",
+      "end_label": "08:08",
+      "text": "qui est à jour constamment et qui est efficace quoi. Une demande à"
+    },
+    {
+      "id": 86,
+      "start": 488.5,
+      "end": 495.52,
+      "start_label": "08:08",
+      "end_label": "08:16",
+      "text": "pays comme là on est en train de faire et puis on fait du matching, on croise les données et ensuite"
+    },
+    {
+      "id": 87,
+      "start": 495.52,
+      "end": 502.42,
+      "start_label": "08:16",
+      "end_label": "08:22",
+      "text": "on a les informations manquantes donc si vous voulez voir un peu plus d'informations vous allez"
+    },
+    {
+      "id": 88,
+      "start": 502.42,
+      "end": 508.66,
+      "start_label": "08:22",
+      "end_label": "08:29",
+      "text": "là directement sur ce lien je vous le mettrais dans le support technique donc data.group.fr,"
+    },
+    {
+      "id": 89,
+      "start": 508.66,
+      "end": 514.54,
+      "start_label": "08:29",
+      "end_label": "08:35",
+      "text": "data set, vous pouvez voir que là on a plusieurs jeux de données comme on avait tout à l'heure"
+    },
+    {
+      "id": 90,
+      "start": 514.54,
+      "end": 521.46,
+      "start_label": "08:35",
+      "end_label": "08:41",
+      "text": "Donc là on a la base sirène, on peut faire vraiment tout et n'importe quoi."
+    },
+    {
+      "id": 91,
+      "start": 521.46,
+      "end": 528.02,
+      "start_label": "08:41",
+      "end_label": "08:48",
+      "text": "Il y a trop de choses à faire, on peut cartographier des indicateurs sur l'écrit"
+    },
+    {
+      "id": 92,
+      "start": 528.02,
+      "end": 534.78,
+      "start_label": "08:48",
+      "end_label": "08:55",
+      "text": "Médélis, on peut le récupérer par API. On peut vraiment faire un éliminément de choses,"
+    },
+    {
+      "id": 93,
+      "start": 534.78,
+      "end": 540.66,
+      "start_label": "08:55",
+      "end_label": "09:01",
+      "text": "surtout si on connecte directement un système comme CloCode, les possibilités"
+    },
+    {
+      "id": 94,
+      "start": 540.66,
+      "end": 546.46,
+      "start_label": "09:01",
+      "end_label": "09:06",
+      "text": "sont assez énormes, on peut vraiment s'amuser sur les données, on peut comprendre pas mal de choses"
+    },
+    {
+      "id": 95,
+      "start": 546.46,
+      "end": 552.74,
+      "start_label": "09:06",
+      "end_label": "09:13",
+      "text": "sur ce qui se passe en France. Avant c'était assez complexe parce qu'on devait, je sais plus"
+    },
+    {
+      "id": 96,
+      "start": 552.74,
+      "end": 558.58,
+      "start_label": "09:13",
+      "end_label": "09:19",
+      "text": "qu'on récupérait ça, parce que maintenant ça a changé, avant c'était pas le même site,"
+    },
+    {
+      "id": 97,
+      "start": 558.58,
+      "end": 567.55,
+      "start_label": "09:19",
+      "end_label": "09:28",
+      "text": "il n'était pas brandé pareil, donné le valeur foncière, on peut voir que là depuis juillet"
+    },
+    {
+      "id": 98,
+      "start": 567.55,
+      "end": 580.11,
+      "start_label": "09:28",
+      "end_label": "09:40",
+      "text": "2022, il y a 1,8 million d'utilisation, de licence ouverte et franchement ça"
+    },
+    {
+      "id": 99,
+      "start": 580.11,
+      "end": 583.87,
+      "start_label": "09:40",
+      "end_label": "09:44",
+      "text": "accessible partout, pour tout le monde, c'est ça qui est top, il n'y a pas de"
+    },
+    {
+      "id": 100,
+      "start": 583.87,
+      "end": 593.25,
+      "start_label": "09:44",
+      "end_label": "09:53",
+      "text": "créer un compte ou quoi que ce soit, voilà ça va prendre 25 à 40 minutes"
+    },
+    {
+      "id": 101,
+      "start": 593.25,
+      "end": 600.69,
+      "start_label": "09:53",
+      "end_label": "10:01",
+      "text": "ah voilà c'est ça comme on peut voir on a les fichiers juste ici qu'on peut"
+    },
+    {
+      "id": 102,
+      "start": 600.69,
+      "end": 604.59,
+      "start_label": "10:01",
+      "end_label": "10:05",
+      "text": "récupérer, on peut le télécharger. Je ne vais pas le faire parce que c'est des"
+    },
+    {
+      "id": 103,
+      "start": 604.59,
+      "end": 612.35,
+      "start_label": "10:05",
+      "end_label": "10:12",
+      "text": "fichiers qui sont assez énormes. On peut faire la réutilisation API."
+    },
+    {
+      "id": 104,
+      "start": 612.35,
+      "end": 627.87,
+      "start_label": "10:12",
+      "end_label": "10:28",
+      "text": "Regardez, il y a des gens qui font des sas. Corentin d'avio en full. IA, ils sont"
+    },
+    {
+      "id": 105,
+      "start": 627.87,
+      "end": 630.27,
+      "start_label": "10:28",
+      "end_label": "10:30",
+      "text": "disponibles directement sur le site de l'Etat."
+    },
+    {
+      "id": 106,
+      "start": 630.27,
+      "end": 635.39,
+      "start_label": "10:30",
+      "end_label": "10:35",
+      "text": "On va aller voir la réutilisation. Ça, je peux vous assurer que c'est un site fait par"
+    },
+    {
+      "id": 107,
+      "start": 635.39,
+      "end": 637.87,
+      "start_label": "10:35",
+      "end_label": "10:38",
+      "text": "Claude. Ce n'est pas le kenmodel mais sûrement"
+    },
+    {
+      "id": 108,
+      "start": 637.87,
+      "end": 658.55,
+      "start_label": "10:38",
+      "end_label": "10:59",
+      "text": "4.5 peut-être, ouais c'est pas mal. On va voir d'autres utilisations, lui aussi"
+    },
+    {
+      "id": 109,
+      "start": 658.55,
+      "end": 666.22,
+      "start_label": "10:59",
+      "end_label": "11:06",
+      "text": "il s'est fait avec Delia, carrément je pourrais me faire un petit site, ça"
+    },
+    {
+      "id": 110,
+      "start": 666.22,
+      "end": 672.9,
+      "start_label": "11:06",
+      "end_label": "11:13",
+      "text": "paie pas mal pour le SEO aussi pour renforcer votre expertise, Loic Ployard"
+    },
+    {
+      "id": 111,
+      "start": 672.9,
+      "end": 681.34,
+      "start_label": "11:13",
+      "end_label": "11:21",
+      "text": "Loic Ployard, réutilisation, il arrive directement, c'est pas mal ça"
+    },
+    {
+      "id": 112,
+      "start": 681.34,
+      "end": 684.38,
+      "start_label": "11:21",
+      "end_label": "11:24",
+      "text": "pourquoi pas avoir ça peut être intéressant de faire un petit site"
+    },
+    {
+      "id": 113,
+      "start": 684.38,
+      "end": 693.72,
+      "start_label": "11:24",
+      "end_label": "11:34",
+      "text": "rapide avec la PIDATA Gouvre et ensuite de le positionner du coup sur cette"
+    },
+    {
+      "id": 114,
+      "start": 693.72,
+      "end": 697.26,
+      "start_label": "11:34",
+      "end_label": "11:37",
+      "text": "partie là au niveau de la réutilisation ça va bien vous placer"
+    },
+    {
+      "id": 115,
+      "start": 697.26,
+      "end": 703.78,
+      "start_label": "11:37",
+      "end_label": "11:44",
+      "text": "vous pouvez vraiment tout faire je vous invite à checker un peu toutes les"
+    },
+    {
+      "id": 116,
+      "start": 703.78,
+      "end": 707.86,
+      "start_label": "11:44",
+      "end_label": "11:48",
+      "text": "données qu'on peut récupérer parce qu'il y a vraiment de tout"
+    },
+    {
+      "id": 117,
+      "start": 707.86,
+      "end": 712.82,
+      "start_label": "11:48",
+      "end_label": "11:53",
+      "text": "vous pouvez faire pas mal de choses c'est assez intéressant maintenant c'est"
+    },
+    {
+      "id": 118,
+      "start": 712.82,
+      "end": 715.64,
+      "start_label": "11:53",
+      "end_label": "11:56",
+      "text": "l'un des sites que j'utilise le plus pour mes clients pour aller scraper du"
+    },
+    {
+      "id": 119,
+      "start": 715.64,
+      "end": 720.4,
+      "start_label": "11:56",
+      "end_label": "12:00",
+      "text": "leads ou pour les enrichir. En fait il y a toutes les informations de la"
+    },
+    {
+      "id": 120,
+      "start": 720.4,
+      "end": 724.02,
+      "start_label": "12:00",
+      "end_label": "12:04",
+      "text": "France. C'est vraiment une plus value. J'avais fait un post d'ailleurs une"
+    },
+    {
+      "id": 121,
+      "start": 724.02,
+      "end": 730.16,
+      "start_label": "12:04",
+      "end_label": "12:10",
+      "text": "codeine dessus qui avait explosé où je donnais une méthode. Un post qu'on est en train"
+    },
+    {
+      "id": 122,
+      "start": 730.16,
+      "end": 737.89,
+      "start_label": "12:10",
+      "end_label": "12:18",
+      "text": "de voir là actuellement. D'ailleurs le post où on a fait"
+    },
+    {
+      "id": 123,
+      "start": 737.89,
+      "end": 742.51,
+      "start_label": "12:18",
+      "end_label": "12:23",
+      "text": "des lignes maniètes là ensemble il a assez bien fonctionné. J'ai changé un petit"
+    },
+    {
+      "id": 124,
+      "start": 742.51,
+      "end": 749.91,
+      "start_label": "12:23",
+      "end_label": "12:30",
+      "text": "peu le texte mais on a fait 457 commentaires en quatre heures. On a 22000 impressions c'est pas"
+    },
+    {
+      "id": 125,
+      "start": 749.91,
+      "end": 757.87,
+      "start_label": "12:30",
+      "end_label": "12:38",
+      "text": "mal j'ai déjà reçu un appel et deux calls sur mon calendrier et c'était du coup celui-là là."
+    },
+    {
+      "id": 126,
+      "start": 757.87,
+      "end": 765.31,
+      "start_label": "12:38",
+      "end_label": "12:45",
+      "text": "J'ai fait 3404 posts et j'expliquais justement comment récupérer des entreprises etc. Vous"
+    },
+    {
+      "id": 127,
+      "start": 765.31,
+      "end": 768.75,
+      "start_label": "12:45",
+      "end_label": "12:49",
+      "text": "pouvez faire exactement la même chose sauf que là nous on est en train de parler d'enrichissement."
+    },
+    {
+      "id": 128,
+      "start": 768.75,
+      "end": 774.61,
+      "start_label": "12:49",
+      "end_label": "12:55",
+      "text": "Donc ici vous voulez récupérer des leads et ensuite les enrichir, vous pouvez très"
+    },
+    {
+      "id": 129,
+      "start": 774.61,
+      "end": 778.19,
+      "start_label": "12:55",
+      "end_label": "12:58",
+      "text": "bien passer en premier sur data gov sauf que vous chargez le prompt et vous envoyez"
+    },
+    {
+      "id": 130,
+      "start": 778.19,
+      "end": 779.19,
+      "start_label": "12:58",
+      "end_label": "12:59",
+      "text": "une autre demande."
+    },
+    {
+      "id": 131,
+      "start": 779.19,
+      "end": 792.98,
+      "start_label": "12:59",
+      "end_label": "13:13",
+      "text": "Hop, donc là il est en train de travailler, c'est top, là il a fait, ok, 17%, 205"
+    },
+    {
+      "id": 132,
+      "start": 792.98,
+      "end": 800.18,
+      "start_label": "13:13",
+      "end_label": "13:20",
+      "text": "croguer, état 7 minutes, après ça va faire une boucle, il est à 50%, ok,"
+    },
+    {
+      "id": 133,
+      "start": 800.18,
+      "end": 805.54,
+      "start_label": "13:20",
+      "end_label": "13:26",
+      "text": "on va le laisser travailler mais vous avez compris l'objectif quoi on peut"
+    },
+    {
+      "id": 134,
+      "start": 805.54,
+      "end": 807.94,
+      "start_label": "13:26",
+      "end_label": "13:28",
+      "text": "faire des recherches par sirène après c'est ce qu'on va faire"
+    },
+    {
+      "id": 135,
+      "start": 807.94,
+      "end": 812.66,
+      "start_label": "13:28",
+      "end_label": "13:33",
+      "text": "il y en a un dans le prompt, je peux faire la réutilisation, c'est ce qu'on a vu"
+    },
+    {
+      "id": 136,
+      "start": 812.66,
+      "end": 816.62,
+      "start_label": "13:33",
+      "end_label": "13:37",
+      "text": "les gens ce qui sont faits c'est quoi ça ?"
+    },
+    {
+      "id": 137,
+      "start": 816.62,
+      "end": 827.81,
+      "start_label": "13:37",
+      "end_label": "13:48",
+      "text": "je vais les voir ok c'est pas mal bon ça aussi c'est du full codex ou"
+    },
+    {
+      "id": 138,
+      "start": 827.81,
+      "end": 832.41,
+      "start_label": "13:48",
+      "end_label": "13:52",
+      "text": "credit gpt c'est rien je pense c'est du full codex le design c'est pas du"
+    },
+    {
+      "id": 139,
+      "start": 832.41,
+      "end": 836.49,
+      "start_label": "13:52",
+      "end_label": "13:56",
+      "text": "code code et voilà les gens ils mettent un petit peu leur"
+    },
+    {
+      "id": 140,
+      "start": 836.49,
+      "end": 842.41,
+      "start_label": "13:56",
+      "end_label": "14:02",
+      "text": "création, c'est intéressant honnêtement. On peut voir pas mal de... c'est pas mal"
+    },
+    {
+      "id": 141,
+      "start": 842.41,
+      "end": 847.61,
+      "start_label": "14:02",
+      "end_label": "14:08",
+      "text": "fait hein, pas mal fait. Donc pour l'essieu, je vous conseille quand même de faire un"
+    },
+    {
+      "id": 142,
+      "start": 847.61,
+      "end": 856.95,
+      "start_label": "14:08",
+      "end_label": "14:17",
+      "text": "petit projet comme ça, ça peut être pas mal du tout pour placer autrement en"
+    },
+    {
+      "id": 143,
+      "start": 856.95,
+      "end": 863.01,
+      "start_label": "14:17",
+      "end_label": "14:23",
+      "text": "freelance ou d'agence ou d'expertise, ça peut être cool. Je sais pas si ils acceptent"
+    },
+    {
+      "id": 144,
+      "start": 863.01,
+      "end": 866.57,
+      "start_label": "14:23",
+      "end_label": "14:27",
+      "text": "tout le monde par contre ça reste à voir. Je pense que si vous êtes à tête des"
+    },
+    {
+      "id": 145,
+      "start": 866.57,
+      "end": 872.41,
+      "start_label": "14:27",
+      "end_label": "14:32",
+      "text": "projets qui ne sont pas bien complexes à faire, on va apprendre ces faisables. On a"
+    },
+    {
+      "id": 146,
+      "start": 872.41,
+      "end": 877.73,
+      "start_label": "14:32",
+      "end_label": "14:38",
+      "text": "la partie organisation, jeux de données. Je ne sais plus où on me voit, là c'est tout ce"
+    },
+    {
+      "id": 147,
+      "start": 877.73,
+      "end": 885.25,
+      "start_label": "14:38",
+      "end_label": "14:45",
+      "text": "qu'on peut faire avec les API. Il y en a énormément. Vraiment, amusez-vous."
+    },
+    {
+      "id": 148,
+      "start": 885.25,
+      "end": 895.98,
+      "start_label": "14:45",
+      "end_label": "14:56",
+      "text": "Testez un peu les jeux de données disponibles."
+    },
+    {
+      "id": 149,
+      "start": 895.98,
+      "end": 904.7,
+      "start_label": "14:56",
+      "end_label": "15:05",
+      "text": "vous pouvez vraiment tout faire. Donc on va voir où il en est, notre code code, votre session,"
+    },
+    {
+      "id": 150,
+      "start": 904.7,
+      "end": 919.91,
+      "start_label": "15:05",
+      "end_label": "15:20",
+      "text": "là il est en train de se faire avec deux monitors qui sont en train de progresser en même temps,"
+    },
+    {
+      "id": 151,
+      "start": 919.91,
+      "end": 928.06,
+      "start_label": "15:20",
+      "end_label": "15:28",
+      "text": "plus vous allez lui laisser de temps avec votre code pour enrichir du coup vos leads,"
+    },
+    {
+      "id": 152,
+      "start": 928.06,
+      "end": 932.78,
+      "start_label": "15:28",
+      "end_label": "15:33",
+      "text": "plus il va faire quelque chose de qualitatif. Donc à la fin de ce système, on est en train"
+    },
+    {
+      "id": 153,
+      "start": 932.78,
+      "end": 937.58,
+      "start_label": "15:33",
+      "end_label": "15:38",
+      "text": "de voir là ou de reprendre que je lui ai envoyé, je pourrais lui demander d'aller chercher d'autres"
+    },
+    {
+      "id": 154,
+      "start": 937.58,
+      "end": 942.82,
+      "start_label": "15:38",
+      "end_label": "15:43",
+      "text": "jeux de données pour enrichir un maximum et plus d'informations. C'est le temps que vous allez"
+    },
+    {
+      "id": 155,
+      "start": 942.82,
+      "end": 948.66,
+      "start_label": "15:43",
+      "end_label": "15:49",
+      "text": "consacrer à votre base de lit, ce qui va vous permettre d'en avoir une de plus en plus."
+    },
+    {
+      "id": 156,
+      "start": 948.66,
+      "end": 1015.9,
+      "start_label": "15:49",
+      "end_label": "16:56",
+      "text": "Je lui demande il reste combien de temps selon toi. Donc vous avez vu à chaque séance, sur"
+    },
+    {
+      "id": 157,
+      "start": 1015.9,
+      "end": 1026.04,
+      "start_label": "16:56",
+      "end_label": "17:06",
+      "text": "chaque séance plutôt, on utilise un système de prompt et ensuite on construit. Et après on"
+    },
+    {
+      "id": 158,
+      "start": 1026.04,
+      "end": 1033.51,
+      "start_label": "17:06",
+      "end_label": "17:14",
+      "text": "on avise, comme la première séance qu'on a vu sur Code Code, la stratégie. Vous pouvez vraiment tout"
+    },
+    {
+      "id": 159,
+      "start": 1033.51,
+      "end": 1039.19,
+      "start_label": "17:14",
+      "end_label": "17:19",
+      "text": "construire. Vous avez les capacités je pense, après la compréhension que vous avez eu au fur et à"
+    },
+    {
+      "id": 160,
+      "start": 1039.19,
+      "end": 1044.79,
+      "start_label": "17:19",
+      "end_label": "17:25",
+      "text": "mesure des projets, et des améliorations que vous avez dû faire avec par exemple le blog"
+    },
+    {
+      "id": 161,
+      "start": 1044.79,
+      "end": 1052.99,
+      "start_label": "17:25",
+      "end_label": "17:33",
+      "text": "automatique, la partie c'est internet, faire un petit peu maintenant ce que vous voulez. Le but"
+    },
+    {
+      "id": 162,
+      "start": 1052.99,
+      "end": 1059.39,
+      "start_label": "17:33",
+      "end_label": "17:39",
+      "text": "c'est vraiment aussi de prendre une expertise de votre propre expérience dans le sens où vous pouvez"
+    },
+    {
+      "id": 163,
+      "start": 1059.39,
+      "end": 1066.27,
+      "start_label": "17:39",
+      "end_label": "17:46",
+      "text": "vous donner l'objectif de projet et ensuite le construire de votre côté avec des systèmes de"
+    },
+    {
+      "id": 164,
+      "start": 1066.27,
+      "end": 1071.15,
+      "start_label": "17:46",
+      "end_label": "17:51",
+      "text": "prompte, avec des fichiers MD, avec votre réflexion personnelle, ensuite voir comment"
+    },
+    {
+      "id": 165,
+      "start": 1071.15,
+      "end": 1075.07,
+      "start_label": "17:51",
+      "end_label": "17:55",
+      "text": "lier à vos réponses, voir comment vous pouvez améliorer. Je pense que c'est vraiment comme ça que"
+    },
+    {
+      "id": 166,
+      "start": 1075.07,
+      "end": 1085.3,
+      "start_label": "17:55",
+      "end_label": "18:05",
+      "text": "vous pouvez apprendre encore plus et avoir une meilleure expertise. En tout cas,"
+    },
+    {
+      "id": 167,
+      "start": 1085.3,
+      "end": 1089.42,
+      "start_label": "18:05",
+      "end_label": "18:09",
+      "text": "je n'ai pas d'inquiétude que derrière, si vous avez un projet client, vous allez pouvoir le"
+    },
+    {
+      "id": 168,
+      "start": 1089.42,
+      "end": 1094.06,
+      "start_label": "18:09",
+      "end_label": "18:14",
+      "text": "résoudre. De toute manière, si vous avez la main de question, vous pouvez directement venir"
+    },
+    {
+      "id": 169,
+      "start": 1094.06,
+      "end": 1148.23,
+      "start_label": "18:14",
+      "end_label": "19:08",
+      "text": "sur WhatsApp, sur Slack, et sirene trouvée, il n'en a pas trouvé beaucoup. Donc là,"
+    },
+    {
+      "id": 170,
+      "start": 1148.23,
+      "end": 1154.95,
+      "start_label": "19:08",
+      "end_label": "19:15",
+      "text": "vous avez vu qu'au final il n'a pas trouvé beaucoup de sirènes donc on va lui demander"
+    },
+    {
+      "id": 171,
+      "start": 1154.95,
+      "end": 1159.51,
+      "start_label": "19:15",
+      "end_label": "19:20",
+      "text": "d'aller faire un jeu de données différent là il a déjà la stratégie grâce aux prompts"
+    },
+    {
+      "id": 172,
+      "start": 1159.51,
+      "end": 1165.23,
+      "start_label": "19:20",
+      "end_label": "19:25",
+      "text": "qu'on lui a envoyé maintenant on va chercher à réussir encore une fois tout ce fichier là"
+    },
+    {
+      "id": 173,
+      "start": 1165.23,
+      "end": 1173.07,
+      "start_label": "19:25",
+      "end_label": "19:33",
+      "text": "donc comme je compte vous dire le but si vous voulez un résultat qui sera concret on met"
+    },
+    {
+      "id": 174,
+      "start": 1173.07,
+      "end": 1177.63,
+      "start_label": "19:33",
+      "end_label": "19:38",
+      "text": "système de prompt, on voit le résultat, on modifie, on améliore. Je vais expliquer"
+    },
+    {
+      "id": 175,
+      "start": 1177.63,
+      "end": 1190.2,
+      "start_label": "19:38",
+      "end_label": "19:50",
+      "text": "clairement, ok, donc là je vais expliquer clairement que ça ne va pas le"
+    },
+    {
+      "id": 176,
+      "start": 1190.2,
+      "end": 1196.18,
+      "start_label": "19:50",
+      "end_label": "19:56",
+      "text": "tour et que je cherche à améliorer du coup les leads avec leurs sirènes et"
+    },
+    {
+      "id": 177,
+      "start": 1196.18,
+      "end": 1199.14,
+      "start_label": "19:56",
+      "end_label": "19:59",
+      "text": "sirènes. Donc là ce qu'il a fait c'est qu'il a réfléchi, il m'a proposé un"
+    },
+    {
+      "id": 178,
+      "start": 1199.14,
+      "end": 1203.7,
+      "start_label": "19:59",
+      "end_label": "20:04",
+      "text": "plan, télécharger le data set sirène établissement, j'ai localisé donc"
+    },
+    {
+      "id": 179,
+      "start": 1203.7,
+      "end": 1208.66,
+      "start_label": "20:04",
+      "end_label": "20:09",
+      "text": "il y a 150 000 restaurants à peu près, ensuite chercher du coup le matching"
+    },
+    {
+      "id": 180,
+      "start": 1208.66,
+      "end": 1212.86,
+      "start_label": "20:09",
+      "end_label": "20:13",
+      "text": "entre les données qu'on a et du fichier zip qu'il a téléchargé."
+    },
+    {
+      "id": 181,
+      "start": 1212.86,
+      "end": 1245.73,
+      "start_label": "20:13",
+      "end_label": "20:46",
+      "text": "Ça prend un petit peu de temps. Vous voyez là qu'il est en train d'utiliser du"
+    },
+    {
+      "id": 182,
+      "start": 1245.73,
+      "end": 1254.35,
+      "start_label": "20:46",
+      "end_label": "20:54",
+      "text": "béton 3 donc en C. C'est le code 98.NOTPHONE. Je relance sur un airbar, rayon serré"
+    },
+    {
+      "id": 183,
+      "start": 1254.35,
+      "end": 1261.46,
+      "start_label": "20:54",
+      "end_label": "21:01",
+      "text": "plus match, plus tolérant, coquet. Donc là il propose une nouvelle stratégie."
+    },
+    {
+      "id": 184,
+      "start": 1261.46,
+      "end": 1325.58,
+      "start_label": "21:01",
+      "end_label": "22:06",
+      "text": "Donc il n'a pas passé par le zip. On va voir après l'enrichissement qu'il a fait."
+    },
+    {
+      "id": 185,
+      "start": 1325.58,
+      "end": 1330.1,
+      "start_label": "22:06",
+      "end_label": "22:10",
+      "text": "L'image lancée sur 11000.NOTPHONE 13 est à 10 minutes. Là il tente une"
+    },
+    {
+      "id": 186,
+      "start": 1330.1,
+      "end": 1333.1,
+      "start_label": "22:10",
+      "end_label": "22:13",
+      "text": "nouvelle stratégie, on va voir après le résultat d'ici dix minutes."
+    },
+    {
+      "id": 187,
+      "start": 1333.1,
+      "end": 1340.74,
+      "start_label": "22:13",
+      "end_label": "22:21",
+      "text": "L'objectif c'est vraiment, là vous voyez que je l'ai fait par rapport à la"
+    },
+    {
+      "id": 188,
+      "start": 1340.74,
+      "end": 1344.62,
+      "start_label": "22:21",
+      "end_label": "22:25",
+      "text": "restauration, vous êtes sûrement dans un autre secteur donc la stratégie sera"
+    },
+    {
+      "id": 189,
+      "start": 1344.62,
+      "end": 1347.18,
+      "start_label": "22:25",
+      "end_label": "22:27",
+      "text": "différente. Donc vous allez emprunter un nouveau parcours, c'est pour ça que"
+    },
+    {
+      "id": 190,
+      "start": 1347.18,
+      "end": 1350.82,
+      "start_label": "22:27",
+      "end_label": "22:31",
+      "text": "derrière, ce qui est important c'est d'enrichir votre système de promptes"
+    },
+    {
+      "id": 191,
+      "start": 1350.82,
+      "end": 1355.02,
+      "start_label": "22:31",
+      "end_label": "22:35",
+      "text": "après la VA que vous avez envoyé. Ok on peut améliorer, on le sait."
+    },
+    {
+      "id": 192,
+      "start": 1355.02,
+      "end": 1358.06,
+      "start_label": "22:35",
+      "end_label": "22:38",
+      "text": "Donc comment on peut faire pour améliorer ? Je vais vous demander à code code"
+    },
+    {
+      "id": 193,
+      "start": 1358.06,
+      "end": 1361.1,
+      "start_label": "22:38",
+      "end_label": "22:41",
+      "text": "d'aller chercher des informations supplémentaires sur le jeu de données."
+    },
+    {
+      "id": 194,
+      "start": 1361.1,
+      "end": 1377.34,
+      "start_label": "22:41",
+      "end_label": "22:57",
+      "text": "Donc le jeu de données, on l'a vu ensemble, c'était là, on va attendre un petit peu, on va le laisser travailler."
+    },
+    {
+      "id": 195,
+      "start": 1377.34,
+      "end": 1385.34,
+      "start_label": "22:57",
+      "end_label": "23:05",
+      "text": "Donc on va lui demander si la stratégie est bonne ou pas."
+    },
+    {
+      "id": 196,
+      "start": 1385.34,
+      "end": 1395.78,
+      "start_label": "23:05",
+      "end_label": "23:16",
+      "text": "Donc on va lui donner une question supplémentaire pour voir si ce qui m'a en place est vraiment utile."
+    },
+    {
+      "id": 197,
+      "start": 1395.78,
+      "end": 1403.78,
+      "start_label": "23:16",
+      "end_label": "23:24",
+      "text": "Non pas suffisant, le rematch API n'a remonté que 310%, le vrai gars demande de télécharger un nain et faire un matching au local sur CP Ville."
+    },
+    {
+      "id": 198,
+      "start": 1403.78,
+      "end": 1421.27,
+      "start_label": "23:24",
+      "end_label": "23:41",
+      "text": "il va se faire un rematch API, il va repartir sur la stratégie numéro une, donc télécharger"
+    },
+    {
+      "id": 199,
+      "start": 1421.27,
+      "end": 1425.89,
+      "start_label": "23:41",
+      "end_label": "23:46",
+      "text": "vraiment tous les restaurants en France et ensuite faire le matching qu'on parait, qui"
+    },
+    {
+      "id": 200,
+      "start": 1425.89,
+      "end": 1451.26,
+      "start_label": "23:46",
+      "end_label": "24:11",
+      "text": "corresponde du coup à ma base de données, qu'on va attendre un petit peu, je donne"
+    },
+    {
+      "id": 201,
+      "start": 1451.26,
+      "end": 1457.26,
+      "start_label": "24:11",
+      "end_label": "24:17",
+      "text": "Et l'information supplémentaire, ça ne sert à rien de perdre son temps, on lance le bulk sérén."
+    },
+    {
+      "id": 202,
+      "start": 1457.26,
+      "end": 1488.32,
+      "start_label": "24:17",
+      "end_label": "24:48",
+      "text": "Donc là il est en train de télécharger la partie, je pense qu'il a téléchargé un local."
+    },
+    {
+      "id": 203,
+      "start": 1488.32,
+      "end": 1495.98,
+      "start_label": "24:48",
+      "end_label": "24:56",
+      "text": "Donc là ça va prendre un petit peu de temps parce que c'est quand même un sacré co-fichier."
+    },
+    {
+      "id": 204,
+      "start": 1495.98,
+      "end": 1501.74,
+      "start_label": "24:56",
+      "end_label": "25:02",
+      "text": "Donc là il va préparer le script pour matcher."
+    },
+    {
+      "id": 205,
+      "start": 1501.74,
+      "end": 1506.74,
+      "start_label": "25:02",
+      "end_label": "25:07",
+      "text": "Et ensuite il va nous refaire le rebuild xlsx."
+    },
+    {
+      "id": 206,
+      "start": 1506.74,
+      "end": 1524.68,
+      "start_label": "25:07",
+      "end_label": "25:25",
+      "text": "On va demander... Ok bon bah il m'a donné les informations. Ah oui, on prend pas mal de temps"
+    },
+    {
+      "id": 207,
+      "start": 1524.68,
+      "end": 1564.52,
+      "start_label": "25:25",
+      "end_label": "26:05",
+      "text": "d'en parler. Il me fait le matching local. Bon je vais demander... J'ai oublié le N."
+    },
+    {
+      "id": 208,
+      "start": 1564.52,
+      "end": 1571.73,
+      "start_label": "26:05",
+      "end_label": "26:12",
+      "text": "Ça j'ai le en attente. Casse travailler. On va attendre qu'ils signent les deux tâches."
+    },
+    {
+      "id": 209,
+      "start": 1571.73,
+      "end": 1576.97,
+      "start_label": "26:12",
+      "end_label": "26:17",
+      "text": "Donc là on a 4 monitors qui sont en running. Strong rematch, Sunday,"
+    },
+    {
+      "id": 210,
+      "start": 1576.97,
+      "end": 1596.26,
+      "start_label": "26:17",
+      "end_label": "26:36",
+      "text": "Donc là il y a 4 tâches qui sont en train d'être faites en parallèle, 14 minutes rythme"
+    },
+    {
+      "id": 211,
+      "start": 1596.26,
+      "end": 1608.43,
+      "start_label": "26:36",
+      "end_label": "26:48",
+      "text": "actuel."
+    },
+    {
+      "id": 212,
+      "start": 1608.43,
+      "end": 1616.07,
+      "start_label": "26:48",
+      "end_label": "26:56",
+      "text": "Le but vraiment c'est que vous partez d'une stratégie au départ, ou la tester, si elle"
+    },
+    {
+      "id": 213,
+      "start": 1616.07,
+      "end": 1622.23,
+      "start_label": "26:56",
+      "end_label": "27:02",
+      "text": "marche, elle convient dès le one shot, tant mieux, sinon on cherche une amélioration."
+    },
+    {
+      "id": 214,
+      "start": 1622.23,
+      "end": 1624.87,
+      "start_label": "27:02",
+      "end_label": "27:05",
+      "text": "là c'est ce que j'ai fait sur cette partie là"
+    },
+    {
+      "id": 215,
+      "start": 1626.31,
+      "end": 1629.55,
+      "start_label": "27:06",
+      "end_label": "27:10",
+      "text": "ma V1 était pas mal, j'avais quand même enrichi 10%"
+    },
+    {
+      "id": 216,
+      "start": 1630.35,
+      "end": 1633.67,
+      "start_label": "27:10",
+      "end_label": "27:14",
+      "text": "et je pense qu'on peut faire mieux, comme on peut faire mieux on demande"
+    },
+    {
+      "id": 217,
+      "start": 1634.99,
+      "end": 1640.07,
+      "start_label": "27:15",
+      "end_label": "27:20",
+      "text": "ok il m'a fait une amélioration, il m'a récupéré 50% de lits en plus avec un syringe trouvé"
+    },
+    {
+      "id": 218,
+      "start": 1640.23,
+      "end": 1642.47,
+      "start_label": "27:20",
+      "end_label": "27:22",
+      "text": "bon, est-ce que je m'arrête là ou je cherche ?"
+    },
+    {
+      "id": 219,
+      "start": 1642.75,
+      "end": 1645.59,
+      "start_label": "27:23",
+      "end_label": "27:26",
+      "text": "moi perso j'ai envie d'aller chercher du 50-60%"
+    },
+    {
+      "id": 220,
+      "start": 1645.99,
+      "end": 1647.99,
+      "start_label": "27:26",
+      "end_label": "27:28",
+      "text": "une fois c'est 50-60%"
+    },
+    {
+      "id": 221,
+      "start": 1647.99,
+      "end": 1653.35,
+      "start_label": "27:28",
+      "end_label": "27:33",
+      "text": "on peut dire ok est-ce que je veux améliorer ou pas moi personnellement ce n'est pas le cas"
+    },
+    {
+      "id": 222,
+      "start": 1653.35,
+      "end": 1664.42,
+      "start_label": "27:33",
+      "end_label": "27:44",
+      "text": "c'est pareil pour tout là on parle de leads on peut le faire aussi sur du rag on va voir qu'on"
+    },
+    {
+      "id": 223,
+      "start": 1664.42,
+      "end": 1675.38,
+      "start_label": "27:44",
+      "end_label": "27:55",
+      "text": "va faire la partie chatbot ok l'information de ce qu'a donné le one shot est bien mais il"
+    },
+    {
+      "id": 224,
+      "start": 1675.38,
+      "end": 1678.66,
+      "start_label": "27:55",
+      "end_label": "27:59",
+      "text": "manque des informations pour qu'on soit plus précis plus technique donc comment on peut faire"
+    },
+    {
+      "id": 225,
+      "start": 1678.66,
+      "end": 1682.16,
+      "start_label": "27:59",
+      "end_label": "28:02",
+      "text": "on peut rajouter justement des informations dans ce règle là."
+    },
+    {
+      "id": 226,
+      "start": 1682.16,
+      "end": 1687.76,
+      "start_label": "28:02",
+      "end_label": "28:08",
+      "text": "Ensuite on fait des tests, est-ce que la réponse me convient maintenant, oui non, non elle me"
+    },
+    {
+      "id": 227,
+      "start": 1687.76,
+      "end": 1692.1,
+      "start_label": "28:08",
+      "end_label": "28:12",
+      "text": "convient pas, ok ben on enrichit encore, on comprend la problématique et on modifie. Et là vous"
+    },
+    {
+      "id": 228,
+      "start": 1692.1,
+      "end": 1695.66,
+      "start_label": "28:12",
+      "end_label": "28:16",
+      "text": "avez de la chance, vous avez une IA qui peut vous permettre ça. En plus de ça vous pouvez"
+    },
+    {
+      "id": 229,
+      "start": 1695.66,
+      "end": 1701.56,
+      "start_label": "28:16",
+      "end_label": "28:22",
+      "text": "faire du MCP pour que directement sur internet de faire des tests, qu'on verra aussi cette"
+    },
+    {
+      "id": 230,
+      "start": 1701.56,
+      "end": 1733.64,
+      "start_label": "28:22",
+      "end_label": "28:54",
+      "text": "C'est parti là, j'y arrive tout le monde."
+    },
+    {
+      "id": 231,
+      "start": 1733.64,
+      "end": 1735.64,
+      "start_label": "28:54",
+      "end_label": "28:56",
+      "text": "Ces mecs qui commentent là, tu..."
+    },
+    {
+      "id": 232,
+      "start": 1735.64,
+      "end": 1737.64,
+      "start_label": "28:56",
+      "end_label": "28:58",
+      "text": "...notre message pour envoyer direct."
+    },
+    {
+      "id": 233,
+      "start": 1737.64,
+      "end": 1739.64,
+      "start_label": "28:58",
+      "end_label": "29:00",
+      "text": "Je sais pas si vous pensez que j'ai une colonie,"
+    },
+    {
+      "id": 234,
+      "start": 1739.64,
+      "end": 1741.64,
+      "start_label": "29:00",
+      "end_label": "29:02",
+      "text": "mais t'en fais quoi, tu leur propose tes services après derrière,"
+    },
+    {
+      "id": 235,
+      "start": 1741.64,
+      "end": 1743.64,
+      "start_label": "29:02",
+      "end_label": "29:04",
+      "text": "ou je t'en sers juste en mode"
+    },
+    {
+      "id": 236,
+      "start": 1743.64,
+      "end": 1867.72,
+      "start_label": "29:04",
+      "end_label": "31:08",
+      "text": "touche visibilité."
+    },
+    {
+      "id": 237,
+      "start": 1867.72,
+      "end": 1873.31,
+      "start_label": "31:08",
+      "end_label": "31:13",
+      "text": "Donc là on voit par où on en est."
+    },
+    {
+      "id": 238,
+      "start": 1873.31,
+      "end": 1878.0,
+      "start_label": "31:13",
+      "end_label": "31:18",
+      "text": "Donc là, hop, punaise."
+    },
+    {
+      "id": 239,
+      "start": 1878.0,
+      "end": 1880.0,
+      "start_label": "31:18",
+      "end_label": "31:20",
+      "text": "On a 620 000 établissements actifs."
+    },
+    {
+      "id": 240,
+      "start": 1880.0,
+      "end": 1882.0,
+      "start_label": "31:20",
+      "end_label": "31:22",
+      "text": "Auréka filtré"
+    },
+    {
+      "id": 241,
+      "start": 1882.0,
+      "end": 1884.0,
+      "start_label": "31:22",
+      "end_label": "31:24",
+      "text": "en 3-7 secondes, lancement du matching local."
+    },
+    {
+      "id": 242,
+      "start": 1884.0,
+      "end": 1886.0,
+      "start_label": "31:24",
+      "end_label": "31:26",
+      "text": "On glace"
+    },
+    {
+      "id": 243,
+      "start": 1886.0,
+      "end": 1888.0,
+      "start_label": "31:26",
+      "end_label": "31:28",
+      "text": "au zip qu'on a récupéré."
+    },
+    {
+      "id": 244,
+      "start": 1888.0,
+      "end": 1896.44,
+      "start_label": "31:28",
+      "end_label": "31:36",
+      "text": "C'est pas mal du tout, on va faire ensuite, sur ces 620 000 là, un matching."
+    },
+    {
+      "id": 245,
+      "start": 1896.44,
+      "end": 1901.44,
+      "start_label": "31:36",
+      "end_label": "31:41",
+      "text": "Donc là, on voit que les 4 moniteurs sont en train de travailler, donc vous pouvez voir ça comme des agents IA"
+    },
+    {
+      "id": 246,
+      "start": 1901.44,
+      "end": 1906.44,
+      "start_label": "31:41",
+      "end_label": "31:46",
+      "text": "qui font chacun leur tâche, qui sont prédéfinis directement par code code."
+    },
+    {
+      "id": 247,
+      "start": 1906.44,
+      "end": 1921.51,
+      "start_label": "31:46",
+      "end_label": "32:02",
+      "text": "Donc là, je vais demander une demande, on va voir si..."
+    },
+    {
+      "id": 248,
+      "start": 1921.51,
+      "end": 1960.43,
+      "start_label": "32:02",
+      "end_label": "32:40",
+      "text": "Ok, donc là, il a fait une erreur en date, il aurait trouvé lui-même de quelque manière par la suite."
+    },
+    {
+      "id": 249,
+      "start": 1960.43,
+      "end": 1967.07,
+      "start_label": "32:40",
+      "end_label": "32:47",
+      "text": "Ok, donc là il a refait un nouveau format, une université du pays qu'il a créé juste"
+    },
+    {
+      "id": 250,
+      "start": 1967.07,
+      "end": 1979.16,
+      "start_label": "32:47",
+      "end_label": "32:59",
+      "text": "avant pour faire le coût matching entre le Trek Seren 01 et l'autre LSX."
+    },
+    {
+      "id": 251,
+      "start": 1979.16,
+      "end": 1991.19,
+      "start_label": "32:59",
+      "end_label": "33:11",
+      "text": "Ok, donc là on a bien ces superbes, superbes, donc ça fonctionne bien le matching."
+    },
+    {
+      "id": 252,
+      "start": 1991.19,
+      "end": 2009.05,
+      "start_label": "33:11",
+      "end_label": "33:29",
+      "text": "là on a trouvé la stratégie superbe vous avez vu tout est parti d'une seule stratégie"
+    },
+    {
+      "id": 253,
+      "start": 2009.05,
+      "end": 2018.87,
+      "start_label": "33:29",
+      "end_label": "33:39",
+      "text": "ensuite on a cherché des améliorations et là du coup on a un retour pour le moment"
+    },
+    {
+      "id": 254,
+      "start": 2018.87,
+      "end": 2023.61,
+      "start_label": "33:39",
+      "end_label": "33:44",
+      "text": "qui atteint les 83% alors qu'avant on était à je sais plus combien on était à 10% je crois"
+    },
+    {
+      "id": 255,
+      "start": 2023.61,
+      "end": 2031.26,
+      "start_label": "33:44",
+      "end_label": "33:51",
+      "text": "c'est un peu moi même c'est pour ça qu'il faut à chaque fois itérer itérer itérer itérer"
+    },
+    {
+      "id": 256,
+      "start": 2031.26,
+      "end": 2037.54,
+      "start_label": "33:51",
+      "end_label": "33:58",
+      "text": "c'est comme ça qu'il faut travailler avec les clients auquel je sais pas faire c'est"
+    },
+    {
+      "id": 257,
+      "start": 2037.54,
+      "end": 2045.74,
+      "start_label": "33:58",
+      "end_label": "34:06",
+      "text": "pas comment je peux résoudre cette problématique là point 1 première stratégie j'envoie un prompt"
+    },
+    {
+      "id": 258,
+      "start": 2045.74,
+      "end": 2050.94,
+      "start_label": "34:06",
+      "end_label": "34:11",
+      "text": "à Claude code Claude code me donne une solution ça marche mais il y a mieux à faire donc qu'est ce"
+    },
+    {
+      "id": 259,
+      "start": 2050.94,
+      "end": 2058.52,
+      "start_label": "34:11",
+      "end_label": "34:19",
+      "text": "que je peux améliorer réflexion prompt itération amélioration que je peux encore améliorer du coup"
+    },
+    {
+      "id": 260,
+      "start": 2058.52,
+      "end": 2065.04,
+      "start_label": "34:19",
+      "end_label": "34:25",
+      "text": "on l'envoie directement à Cloud Code et c'est comme ça qu'il faut faire sur"
+    },
+    {
+      "id": 261,
+      "start": 2065.04,
+      "end": 2131.18,
+      "start_label": "34:25",
+      "end_label": "35:31",
+      "text": "dépôt les clients. Il nous mentionne que c'est bientôt terminé, voilà c'est"
+    },
+    {
+      "id": 262,
+      "start": 2131.18,
+      "end": 2137.3,
+      "start_label": "35:31",
+      "end_label": "35:37",
+      "text": "beau. On a récupéré 3 487, nouveau height,"
+    },
+    {
+      "id": 263,
+      "start": 2137.3,
+      "end": 2147.4,
+      "start_label": "35:37",
+      "end_label": "35:47",
+      "text": "reconstruction du xlsx. Là il est en train de faire les updates au niveau de ce"
+    },
+    {
+      "id": 264,
+      "start": 2147.4,
+      "end": 2165.17,
+      "start_label": "35:47",
+      "end_label": "36:05",
+      "text": "documents là. On va attendre un petit peu. Il a trouvé 10 000 sirènes sur l'élite qu'on"
+    },
+    {
+      "id": 265,
+      "start": 2165.17,
+      "end": 2176.65,
+      "start_label": "36:05",
+      "end_label": "36:17",
+      "text": "avait récupérée sur Greenmaps, à vérifier 6200. Donc là c'est top. Donc on a un peu près,"
+    },
+    {
+      "id": 266,
+      "start": 2176.65,
+      "end": 2183.01,
+      "start_label": "36:17",
+      "end_label": "36:23",
+      "text": "devant on a plus, près poids, c'est pas mal. On va ouvrir le fichier du coup, on va le relire,"
+    },
+    {
+      "id": 267,
+      "start": 2183.01,
+      "end": 2189.01,
+      "start_label": "36:23",
+      "end_label": "36:29",
+      "text": "on va voir les informations qu'on a pu récupérer du coup. Donc là encore une fois,"
+    },
+    {
+      "id": 268,
+      "start": 2189.01,
+      "end": 2205.41,
+      "start_label": "36:29",
+      "end_label": "36:45",
+      "text": "c'est un gros fichier. On va l'importer sur Google Sheets, ça va être plus simple et plus lisible et"
+    },
+    {
+      "id": 269,
+      "start": 2205.41,
+      "end": 2214.13,
+      "start_label": "36:45",
+      "end_label": "36:54",
+      "text": "on va analyser tout ça pour du coup la suite. Donc pour la prochaine séance, business, prospect,"
+    },
+    {
+      "id": 270,
+      "start": 2214.13,
+      "end": 2237.25,
+      "start_label": "36:54",
+      "end_label": "37:17",
+      "text": "xlsx, j'espère que ça a un moment bleu vu que c'est dans le cloud direct et pas en local,"
+    },
+    {
+      "id": 271,
+      "start": 2237.25,
+      "end": 2241.57,
+      "start_label": "37:17",
+      "end_label": "37:22",
+      "text": "pour ça que mon ordinateur chauffe un petit peu. Je vais fermer cette page là,"
+    },
+    {
+      "id": 272,
+      "start": 2241.57,
+      "end": 2267.61,
+      "start_label": "37:22",
+      "end_label": "37:48",
+      "text": "attendre un petit peu. Voilà, superbe. Là on a le récap, les petits schémas, tout ça."
+    },
+    {
+      "id": 273,
+      "start": 2267.61,
+      "end": 2274.69,
+      "start_label": "37:48",
+      "end_label": "37:55",
+      "text": "On a la partie All Leads. C'est là, il est enrichi. Du coup, Domaine,"
+    },
+    {
+      "id": 274,
+      "start": 2274.69,
+      "end": 2283.17,
+      "start_label": "37:55",
+      "end_label": "38:03",
+      "text": "adresse, poste en région, speed, personnalisation, angle, bonjour, bonjour,"
+    },
+    {
+      "id": 275,
+      "start": 2283.17,
+      "end": 2293.84,
+      "start_label": "38:03",
+      "end_label": "38:14",
+      "text": "source URL, place, en plus je vois pas où il a mis les informations, donc on va aller voir avec"
+    },
+    {
+      "id": 276,
+      "start": 2293.84,
+      "end": 2347.96,
+      "start_label": "38:14",
+      "end_label": "39:08",
+      "text": "email, source de performance, je vais lui demander directement, soit j'ai tous les onglets qui"
+    },
+    {
+      "id": 277,
+      "start": 2347.96,
+      "end": 2359.92,
+      "start_label": "39:08",
+      "end_label": "39:20",
+      "text": "entiennent les leads, j'ai un petit collène, des jus, ok, donc all leads il m'a dit, qu'est-ce"
+    },
+    {
+      "id": 278,
+      "start": 2359.92,
+      "end": 2369.46,
+      "start_label": "39:20",
+      "end_label": "39:29",
+      "text": "qu'il voit des deux petites tools alors je vois pas ok attends je vais copier les"
+    },
+    {
+      "id": 279,
+      "start": 2369.46,
+      "end": 2387.32,
+      "start_label": "39:29",
+      "end_label": "39:47",
+      "text": "premières lignes alors peut-être que j'ai pas pris le bon fichier alors attends"
+    },
+    {
+      "id": 280,
+      "start": 2387.32,
+      "end": 2397.28,
+      "start_label": "39:47",
+      "end_label": "39:57",
+      "text": "je suis con j'ai pas pris le bon fichier c'est dans celui là que je travaille"
+    },
+    {
+      "id": 281,
+      "start": 2397.28,
+      "end": 2409.26,
+      "start_label": "39:57",
+      "end_label": "40:09",
+      "text": "en fait je vais essayer de l'ouvrir c'est pour ça qu'il faut bien s'organiser"
+    },
+    {
+      "id": 282,
+      "start": 2409.26,
+      "end": 2415.7,
+      "start_label": "40:09",
+      "end_label": "40:16",
+      "text": "encore une fois là j'ai fait une connerie donc ouais bah oui c'est sûr"
+    },
+    {
+      "id": 283,
+      "start": 2415.7,
+      "end": 2418.66,
+      "start_label": "40:16",
+      "end_label": "40:19",
+      "text": "parce que là il y a du python tout ça c'est sûr que c'est lui je vais quand"
+    },
+    {
+      "id": 284,
+      "start": 2418.66,
+      "end": 2429.69,
+      "start_label": "40:19",
+      "end_label": "40:30",
+      "text": "me voir. C'est sûr. Donc je vais aller voir du coup. Ça va, il faut vraiment bien"
+    },
+    {
+      "id": 285,
+      "start": 2429.69,
+      "end": 2442.4,
+      "start_label": "40:30",
+      "end_label": "40:42",
+      "text": "serrer. Bah oui, c'est sûr. C'est pas ouvert à mon moment."
+    },
+    {
+      "id": 286,
+      "start": 2442.4,
+      "end": 2462.72,
+      "start_label": "40:42",
+      "end_label": "41:03",
+      "text": "On met ça là. Tac. Même lui là. Du coup il doit être dans ça maintenant. Bah oui."
+    },
+    {
+      "id": 287,
+      "start": 2462.72,
+      "end": 2473.73,
+      "start_label": "41:03",
+      "end_label": "41:14",
+      "text": "Bah oui, c'est sûr. C'est moi qui ai fait une caméra. C'est pour ça qu'il faut"
+    },
+    {
+      "id": 288,
+      "start": 2473.73,
+      "end": 2477.01,
+      "start_label": "41:14",
+      "end_label": "41:17",
+      "text": "vraiment, vraiment bien s'organiser. C'est trop important."
+    },
+    {
+      "id": 289,
+      "start": 2477.01,
+      "end": 2503.91,
+      "start_label": "41:17",
+      "end_label": "41:44",
+      "text": "non du coup il n'est pas là. Je vais ré-ouvrir un peu, j'essaie juste de trouver le fichier"
+    },
+    {
+      "id": 290,
+      "start": 2503.91,
+      "end": 2551.1,
+      "start_label": "41:44",
+      "end_label": "42:31",
+      "text": "voilà il n'y a plus de données, il y en avait 5, on va importer les données. Si on ne trouve pas,"
+    },
+    {
+      "id": 291,
+      "start": 2551.1,
+      "end": 2562.89,
+      "start_label": "42:31",
+      "end_label": "42:43",
+      "text": "ça va être très simple. On va mettre bien toutes les informations ajoutées."
+    },
+    {
+      "id": 292,
+      "start": 2562.89,
+      "end": 2573.57,
+      "start_label": "42:43",
+      "end_label": "42:54",
+      "text": "Donc là on a la partie DG Match Statue, là on a la partie annuaire où on peut retrouver"
+    },
+    {
+      "id": 293,
+      "start": 2573.57,
+      "end": 2578.85,
+      "start_label": "42:54",
+      "end_label": "42:59",
+      "text": "du coup directement le lien avec toutes les informations que je souhaite, donc là c'est"
+    },
+    {
+      "id": 294,
+      "start": 2578.85,
+      "end": 2584.39,
+      "start_label": "42:59",
+      "end_label": "43:04",
+      "text": "vraiment une phase d'enrichissement qui est au top, on peut voir son immatriculation"
+    },
+    {
+      "id": 295,
+      "start": 2584.39,
+      "end": 2595.92,
+      "start_label": "43:04",
+      "end_label": "43:16",
+      "text": "RNE, on peut voir son siren, la TVA, son capital social, son adresse, ce n'est pas mon top."
+    },
+    {
+      "id": 296,
+      "start": 2595.92,
+      "end": 2599.78,
+      "start_label": "43:16",
+      "end_label": "43:20",
+      "text": "Du coup, est-ce qu'on a récupéré son nom et prénom à lui ?"
+    },
+    {
+      "id": 297,
+      "start": 2599.78,
+      "end": 2605.38,
+      "start_label": "43:20",
+      "end_label": "43:25",
+      "text": "Ouais, Mathieu, on a récupéré Mathieu, voilà, donc là c'est parfait pour de la"
+    },
+    {
+      "id": 298,
+      "start": 2605.38,
+      "end": 2606.38,
+      "start_label": "43:25",
+      "end_label": "43:26",
+      "text": "prospection automatique."
+    },
+    {
+      "id": 299,
+      "start": 2606.38,
+      "end": 2609.76,
+      "start_label": "43:26",
+      "end_label": "43:30",
+      "text": "On peut récupérer son nom, après on n'a pas le nom de tout le monde encore"
+    },
+    {
+      "id": 300,
+      "start": 2609.76,
+      "end": 2611.0,
+      "start_label": "43:30",
+      "end_label": "43:31",
+      "text": "une fois parce que c'est complexe."
+    },
+    {
+      "id": 301,
+      "start": 2611.0,
+      "end": 2621.05,
+      "start_label": "43:31",
+      "end_label": "43:41",
+      "text": "On va essayer, on a quelques petits noms, mais surtout nos leads, on a au moins la"
+    },
+    {
+      "id": 302,
+      "start": 2621.05,
+      "end": 2622.91,
+      "start_label": "43:41",
+      "end_label": "43:43",
+      "text": "partie Read Confidence, etc."
+    },
+    {
+      "id": 303,
+      "start": 2622.91,
+      "end": 2629.23,
+      "start_label": "43:43",
+      "end_label": "43:49",
+      "text": "Donc là on a réussi à enrichir une partie de nos leads, donc on sait maintenant qui"
+    },
+    {
+      "id": 304,
+      "start": 2629.23,
+      "end": 2633.27,
+      "start_label": "43:49",
+      "end_label": "43:53",
+      "text": "contacter en Light Confidence et en Medium Confidence, donc c'est cela qui nous"
+    },
+    {
+      "id": 305,
+      "start": 2633.27,
+      "end": 2634.27,
+      "start_label": "43:53",
+      "end_label": "43:54",
+      "text": "intéresse."
+    },
+    {
+      "id": 306,
+      "start": 2634.27,
+      "end": 2642.27,
+      "start_label": "43:54",
+      "end_label": "44:02",
+      "text": "Donc maintenant on va falloir tout simplement encore enrichir pour récupérer toutes"
+    },
+    {
+      "id": 307,
+      "start": 2642.27,
+      "end": 2643.27,
+      "start_label": "44:02",
+      "end_label": "44:03",
+      "text": "les adresses e-mail."
+    },
+    {
+      "id": 308,
+      "start": 2643.27,
+      "end": 2652.87,
+      "start_label": "44:03",
+      "end_label": "44:13",
+      "text": "Comme on a pu le voir, on n'a pas pu enrichir un maximum avec notre premier Scrapting."
+    },
+    {
+      "id": 309,
+      "start": 2652.87,
+      "end": 2654.87,
+      "start_label": "44:13",
+      "end_label": "44:15",
+      "text": "On n'a pas pu récupérer toutes les adresses e-mails."
+    },
+    {
+      "id": 310,
+      "start": 2654.87,
+      "end": 2661.31,
+      "start_label": "44:15",
+      "end_label": "44:21",
+      "text": "Là, on va utiliser une API payante avec Apify, qui est une bibliothèque d'ascrapteurs"
+    },
+    {
+      "id": 311,
+      "start": 2661.31,
+      "end": 2666.59,
+      "start_label": "44:21",
+      "end_label": "44:27",
+      "text": "où on peut vraiment tout faire et puis voir comment justement gérer tout ça."
+    },
+    {
+      "id": 312,
+      "start": 2666.59,
+      "end": 2670.27,
+      "start_label": "44:27",
+      "end_label": "44:30",
+      "text": "On va avoir une base de données exploitable pour de la prospection."
+    },
+    {
+      "id": 313,
+      "start": 2670.27,
+      "end": 2678.07,
+      "start_label": "44:30",
+      "end_label": "44:38",
+      "text": "Et après on ira faire aussi, juste avant la prospection, un rangement complet de"
+    },
+    {
+      "id": 314,
+      "start": 2678.07,
+      "end": 2681.39,
+      "start_label": "44:38",
+      "end_label": "44:41",
+      "text": "toute notre base pour qu'elle soit bien structurée, qu'on sache où on en est."
+    },
+    {
+      "id": 315,
+      "start": 2681.39,
+      "end": 2686.39,
+      "start_label": "44:41",
+      "end_label": "44:46",
+      "text": "C'est parti, on se retrouve tout de suite et on attaque la séance du coup"
+    },
+    {
+      "id": 316,
+      "start": 2686.39,
+      "end": 2690.59,
+      "start_label": "44:46",
+      "end_label": "44:51",
+      "text": "17. A tout de suite !"
+    }
+  ]
+}
