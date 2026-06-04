@@ -44,6 +44,14 @@
       <figcaption>Je pose l&#x27;objectif : enrichir les leads avec data.gouv.</figcaption>
     </figure>
   </div>
+
+<div class="denem-inline-docs">
+  <strong>Documentation utile</strong>
+  <a href="https://guides.data.gouv.fr/guide-data.gouv.fr/" target="_blank" rel="noopener">
+    <span>Guide data.gouv.fr</span>
+    <small>Comprendre la recherche et l&#x27;usage des jeux de donnees.</small>
+  </a>
+</div>
 </section>
 
 <section id="section-02" class="section tone-2 layout-cards" data-section="2">
@@ -733,6 +741,14 @@ Prêts pour Apify : E&quot;</code></pre>
       <p>Je dois dire explicitement ce qui ne doit pas bouger.</p>
     </div><ul class="checklist"><li><span>01</span><p>Ne pas écraser `email`.</p></li><li><span>02</span><p>Ne pas écraser `phone`.</p></li><li><span>03</span><p>Ne pas écraser `website`.</p></li><li><span>04</span><p>Ne pas supprimer `source_urls`.</p></li><li><span>05</span><p>Ne pas remplacer les angles de prospection.</p></li></ul>
   </div>
+
+<div class="denem-inline-docs">
+  <strong>Documentation utile</strong>
+  <a href="https://api.gouv.fr/documentation/api-sirene" target="_blank" rel="noopener">
+    <span>API Sirene</span>
+    <small>Acceder aux donnees entreprises.</small>
+  </a>
+</div>
 </section>
 
 <section id="section-28" class="section tone-4 layout-table" data-section="28">
@@ -1089,6 +1105,14 @@ Dis-moi ce qui a déjà été sauvegardé et ce qu&#x27;on peut reprendre plus t
       <figcaption>Le terminal récapitule les résultats de l&#x27;enrichissement.</figcaption>
     </figure>
   </div>
+
+<div class="denem-inline-docs">
+  <strong>Documentation utile</strong>
+  <a href="https://www.insee.fr/fr/accueil" target="_blank" rel="noopener">
+    <span>INSEE</span>
+    <small>Verifier la source institutionnelle des donnees.</small>
+  </a>
+</div>
 </section>
 
 <section id="section-55" class="section tone-1 layout-image" data-section="55">
@@ -1434,6 +1458,122 @@ Réponds avec les chiffres clés et les fichiers créés.</code></pre>
   </div>
 </section>
 </main>
+
+<!-- DENEM documentation enrichment -->
+<style id="denem-docs-style">
+.denem-docs-section {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 72px 18px;
+  background: #fff;
+  color: var(--denem-ink, #111827);
+  border-bottom: 2px solid var(--denem-ink, #111827);
+}
+.denem-docs-wrap {
+  border: 2px solid var(--denem-ink, #111827);
+  box-shadow: var(--denem-shadow, 5px 5px 0 #111827);
+  padding: 26px;
+  background: #fff;
+}
+.denem-docs-kicker,
+.denem-inline-docs strong {
+  display: inline-flex;
+  border: 2px solid var(--denem-ink, #111827);
+  box-shadow: var(--denem-shadow-sm, 3px 3px 0 #111827);
+  background: var(--denem-accent, #2563eb);
+  color: #fff;
+  padding: 6px 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+.denem-docs-section h2 {
+  margin: 18px 0 10px;
+  font-size: clamp(32px, 4vw, 54px);
+  line-height: 1;
+  font-weight: 950;
+  letter-spacing: 0;
+}
+.denem-docs-section p {
+  max-width: 760px;
+  color: #334155;
+  line-height: 1.75;
+  font-size: 18px;
+}
+.denem-docs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+.denem-doc-card,
+.denem-inline-docs a {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 2px solid var(--denem-ink, #111827);
+  box-shadow: var(--denem-shadow-sm, 3px 3px 0 #111827);
+  padding: 16px;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+}
+.denem-doc-card span,
+.denem-inline-docs a span {
+  font-weight: 900;
+  color: var(--denem-accent, #2563eb);
+}
+.denem-doc-card small,
+.denem-inline-docs a small {
+  color: #475569;
+  line-height: 1.5;
+  font-size: 13px;
+}
+.denem-inline-docs {
+  margin-top: 22px;
+  display: grid;
+  gap: 12px;
+  max-width: 760px;
+}
+@media (max-width: 900px) {
+  .denem-docs-grid { grid-template-columns: 1fr; }
+  .denem-docs-section { padding: 52px 16px; }
+  .denem-docs-wrap { padding: 18px; }
+}
+</style>
+<section id="documentation" class="denem-docs-section" aria-label="Documentation externe">
+  <div class="denem-docs-wrap">
+    <div class="denem-docs-kicker">Documentation</div>
+    <h2>Documentation</h2>
+    <p>Liens externes utiles pour refaire la methode, verifier un outil et aller plus loin sans chercher au hasard.</p>
+    <div class="denem-docs-grid">
+      <a class="denem-doc-card" href="https://guides.data.gouv.fr/guide-data.gouv.fr/" target="_blank" rel="noopener">
+        <span>Guide data.gouv.fr</span>
+        <small>Comprendre la recherche et l&#x27;usage des jeux de donnees.</small>
+      </a>
+      <a class="denem-doc-card" href="https://api.gouv.fr/documentation/api-sirene" target="_blank" rel="noopener">
+        <span>API Sirene</span>
+        <small>Acceder aux donnees entreprises.</small>
+      </a>
+      <a class="denem-doc-card" href="https://www.insee.fr/fr/accueil" target="_blank" rel="noopener">
+        <span>INSEE</span>
+        <small>Verifier la source institutionnelle des donnees.</small>
+      </a>
+      <a class="denem-doc-card" href="https://pandas.pydata.org/docs/" target="_blank" rel="noopener">
+        <span>pandas</span>
+        <small>Nettoyer et transformer les tableaux.</small>
+      </a>
+      <a class="denem-doc-card" href="https://docs.python.org/3/library/csv.html" target="_blank" rel="noopener">
+        <span>Python CSV</span>
+        <small>Manipuler les exports CSV proprement.</small>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- /DENEM documentation enrichment -->
+
 <footer class="footer">
   <p>DENEM Academy · Séance 16 · Transcription disponible dans <a href="transcription/seance-16-data-gouv-transcription.md">le dossier transcription</a>.</p>
 </footer>
