@@ -15,6 +15,11 @@
 <style id="denem-act-system">
 :root {
   --denem-act-color: #FB923C;
+  --denem-act: #FB923C;
+  --denem-accent: #FB923C;
+  --denem-ink: #000000;
+  --denem-shadow: 5px 5px 0 #000000;
+  --denem-shadow-sm: 3px 3px 0 #000000;
   --denem-act-bg: #ffffff;
 }
 body {
@@ -168,28 +173,28 @@ body {
   --soft2: #FFFFFF;
   --gray: #FFFFFF;
   --cream: #FFFFFF;
-  --mint: #EAB308;
-  --amber: #EAB308;
-  --yellow: #EAB308;
-  --yellow-dark: #EAB308;
-  --yellow-soft: #EAB308;
-  --sky: #EAB308;
-  --lav: #EAB308;
-  --rose: #EAB308;
-  --blue: #EAB308;
-  --violet: #EAB308;
-  --cyan: #EAB308;
-  --green: #EAB308;
-  --orange: #EAB308;
-  --red: #EAB308;
-  --red-dark: #EAB308;
-  --red-soft: #EAB308;
-  --teal: #EAB308;
-  --teal-soft: #EAB308;
-  --brass: #EAB308;
-  --brass-soft: #EAB308;
-  --purple: #EAB308;
-  --pink: #EAB308;
+  --mint: #FB923C;
+  --amber: #FB923C;
+  --yellow: #FB923C;
+  --yellow-dark: #FB923C;
+  --yellow-soft: #FB923C;
+  --sky: #FB923C;
+  --lav: #FB923C;
+  --rose: #FB923C;
+  --blue: #FB923C;
+  --violet: #FB923C;
+  --cyan: #FB923C;
+  --green: #FB923C;
+  --orange: #FB923C;
+  --red: #FB923C;
+  --red-dark: #FB923C;
+  --red-soft: #FB923C;
+  --teal: #FB923C;
+  --teal-soft: #FB923C;
+  --brass: #FB923C;
+  --brass-soft: #FB923C;
+  --purple: #FB923C;
+  --pink: #FB923C;
   --dark: #FFFFFF;
   --shadow: 8px 8px 0 var(--denem-act);
   --shadow-sm: 4px 4px 0 var(--denem-act);
@@ -1153,6 +1158,35 @@ blockquote span:not(.num):not(.badge),
 </style>
 
 <style id="denem-session-media-system">
+:root {
+  --denem-act: var(--denem-act-color, #60A5FA);
+  --denem-accent: var(--denem-act-color, #60A5FA);
+  --denem-ink: #000000;
+  --denem-shadow: 5px 5px 0 #000000;
+  --denem-shadow-sm: 3px 3px 0 #000000;
+  --mint: var(--denem-act-color, #60A5FA);
+  --amber: var(--denem-act-color, #60A5FA);
+  --yellow: var(--denem-act-color, #60A5FA);
+  --yellow-dark: var(--denem-act-color, #60A5FA);
+  --yellow-soft: var(--denem-act-color, #60A5FA);
+  --sky: var(--denem-act-color, #60A5FA);
+  --lav: var(--denem-act-color, #60A5FA);
+  --rose: var(--denem-act-color, #60A5FA);
+  --blue: var(--denem-act-color, #60A5FA);
+  --violet: var(--denem-act-color, #60A5FA);
+  --cyan: var(--denem-act-color, #60A5FA);
+  --green: var(--denem-act-color, #60A5FA);
+  --orange: var(--denem-act-color, #60A5FA);
+  --red: var(--denem-act-color, #60A5FA);
+  --red-dark: var(--denem-act-color, #60A5FA);
+  --red-soft: var(--denem-act-color, #60A5FA);
+  --teal: var(--denem-act-color, #60A5FA);
+  --teal-soft: var(--denem-act-color, #60A5FA);
+  --brass: var(--denem-act-color, #60A5FA);
+  --brass-soft: var(--denem-act-color, #60A5FA);
+  --purple: var(--denem-act-color, #60A5FA);
+  --pink: var(--denem-act-color, #60A5FA);
+}
 .denem-session-switcher {
   display: grid;
   grid-template-columns: minmax(180px, 240px) minmax(280px, 720px);
@@ -1291,6 +1325,143 @@ figure[class*="shot"]:empty::before,
 }
 .is-media-missing > img {
   display: none !important;
+}
+
+/* Final visibility guard: light cards inside dark poster sections must never inherit white text. */
+[class*="bg-neutral-9"] [class*="bg-white"],
+[class*="bg-neutral-9"] [class*="bg-orange-50"],
+[class*="bg-neutral-9"] [class*="bg-red-50"],
+[class*="bg-neutral-9"] [class*="bg-rose-50"],
+[class*="bg-neutral-9"] [class*="bg-pink-50"],
+[class*="bg-neutral-9"] [class*="bg-amber-50"],
+[class*="bg-neutral-9"] [class*="bg-yellow-50"],
+[class*="bg-neutral-9"] [class*="bg-blue-50"],
+[class*="bg-neutral-9"] [class*="bg-violet-50"],
+[class*="bg-neutral-9"] [class*="bg-purple-50"],
+[class*="bg-neutral-9"] [class*="bg-green-50"],
+[class*="bg-neutral-9"] [class*="bg-emerald-50"],
+[class*="bg-neutral-9"] [class*="bg-teal-50"],
+[class*="bg-neutral-9"] [class*="bg-cyan-50"],
+[class*="bg-neutral-9"] [class*="bg-sky-50"],
+[class*="bg-slate-9"] [class*="bg-white"],
+[class*="bg-slate-9"] [class*="bg-orange-50"],
+[class*="bg-slate-9"] [class*="bg-red-50"],
+[class*="bg-slate-9"] [class*="bg-rose-50"],
+[class*="bg-slate-9"] [class*="bg-pink-50"],
+[class*="bg-slate-9"] [class*="bg-amber-50"],
+[class*="bg-slate-9"] [class*="bg-yellow-50"],
+[class*="bg-slate-9"] [class*="bg-blue-50"],
+[class*="bg-slate-9"] [class*="bg-violet-50"],
+[class*="bg-slate-9"] [class*="bg-purple-50"],
+[class*="bg-slate-9"] [class*="bg-green-50"],
+[class*="bg-slate-9"] [class*="bg-emerald-50"],
+[class*="bg-slate-9"] [class*="bg-teal-50"],
+[class*="bg-slate-9"] [class*="bg-cyan-50"],
+[class*="bg-slate-9"] [class*="bg-sky-50"],
+[class*="bg-gray-9"] [class*="bg-white"],
+[class*="bg-zinc-9"] [class*="bg-white"],
+[class*="bg-stone-9"] [class*="bg-white"],
+[class*="bg-black"] [class*="bg-white"],
+[class*="bg-black"] [class*="bg-orange-50"],
+.dark-section [class*="bg-white"],
+.dark-section [class*="bg-orange-50"] {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+[class*="bg-neutral-9"] [class*="bg-white"] *,
+[class*="bg-neutral-9"] [class*="bg-orange-50"] *,
+[class*="bg-neutral-9"] [class*="bg-red-50"] *,
+[class*="bg-neutral-9"] [class*="bg-rose-50"] *,
+[class*="bg-neutral-9"] [class*="bg-pink-50"] *,
+[class*="bg-neutral-9"] [class*="bg-amber-50"] *,
+[class*="bg-neutral-9"] [class*="bg-yellow-50"] *,
+[class*="bg-neutral-9"] [class*="bg-blue-50"] *,
+[class*="bg-neutral-9"] [class*="bg-violet-50"] *,
+[class*="bg-neutral-9"] [class*="bg-purple-50"] *,
+[class*="bg-neutral-9"] [class*="bg-green-50"] *,
+[class*="bg-neutral-9"] [class*="bg-emerald-50"] *,
+[class*="bg-neutral-9"] [class*="bg-teal-50"] *,
+[class*="bg-neutral-9"] [class*="bg-cyan-50"] *,
+[class*="bg-neutral-9"] [class*="bg-sky-50"] *,
+[class*="bg-slate-9"] [class*="bg-white"] *,
+[class*="bg-slate-9"] [class*="bg-orange-50"] *,
+[class*="bg-slate-9"] [class*="bg-red-50"] *,
+[class*="bg-slate-9"] [class*="bg-rose-50"] *,
+[class*="bg-slate-9"] [class*="bg-pink-50"] *,
+[class*="bg-slate-9"] [class*="bg-amber-50"] *,
+[class*="bg-slate-9"] [class*="bg-yellow-50"] *,
+[class*="bg-slate-9"] [class*="bg-blue-50"] *,
+[class*="bg-slate-9"] [class*="bg-violet-50"] *,
+[class*="bg-slate-9"] [class*="bg-purple-50"] *,
+[class*="bg-slate-9"] [class*="bg-green-50"] *,
+[class*="bg-slate-9"] [class*="bg-emerald-50"] *,
+[class*="bg-slate-9"] [class*="bg-teal-50"] *,
+[class*="bg-slate-9"] [class*="bg-cyan-50"] *,
+[class*="bg-slate-9"] [class*="bg-sky-50"] *,
+[class*="bg-gray-9"] [class*="bg-white"] *,
+[class*="bg-zinc-9"] [class*="bg-white"] *,
+[class*="bg-stone-9"] [class*="bg-white"] *,
+[class*="bg-black"] [class*="bg-white"] *,
+[class*="bg-black"] [class*="bg-orange-50"] *,
+.dark-section [class*="bg-white"] *,
+.dark-section [class*="bg-orange-50"] * {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+[class*="bg-neutral-9"] .grid > div[class*="bg-white"]:not([class*="min-h-full"]),
+[class*="bg-slate-9"] .grid > div[class*="bg-white"]:not([class*="min-h-full"]),
+[class*="bg-black"] .grid > div[class*="bg-white"]:not([class*="min-h-full"]) {
+  align-self: start !important;
+  min-height: 0 !important;
+}
+[class*="bg-neutral-9"] [class*="bg-red-600"],
+[class*="bg-neutral-9"] [class*="bg-blue-600"],
+[class*="bg-neutral-9"] [class*="bg-violet-600"],
+[class*="bg-neutral-9"] [class*="bg-purple-600"],
+[class*="bg-neutral-9"] [class*="bg-orange-600"],
+[class*="bg-neutral-9"] [class*="bg-green-600"],
+[class*="bg-slate-9"] [class*="bg-red-600"],
+[class*="bg-slate-9"] [class*="bg-blue-600"],
+[class*="bg-slate-9"] [class*="bg-violet-600"],
+[class*="bg-slate-9"] [class*="bg-purple-600"],
+[class*="bg-slate-9"] [class*="bg-orange-600"],
+[class*="bg-slate-9"] [class*="bg-green-600"],
+.denem-inline-docs strong,
+.denem-docs-kicker {
+  background: var(--denem-act-color, #60A5FA) !important;
+  background-color: var(--denem-act-color, #60A5FA) !important;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+.denem-doc-card span,
+.denem-inline-docs a span,
+.denem-inline-docs a small {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+.prompt-card,
+.prompt-panel,
+.prompt-block,
+.code-panel,
+.code-card,
+.command-box,
+.mini-prompt {
+  background: #111827 !important;
+  background-color: #111827 !important;
+  color: #f8fafc !important;
+  -webkit-text-fill-color: #f8fafc !important;
+}
+.prompt-card *,
+.prompt-panel *,
+.prompt-block *,
+.code-panel *,
+.code-card *,
+.command-box *,
+.mini-prompt * {
+  color: #f8fafc !important;
+  -webkit-text-fill-color: #f8fafc !important;
 }
 @media (max-width: 700px) {
   .denem-session-switcher {
